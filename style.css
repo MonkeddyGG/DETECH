@@ -175,7 +175,6 @@ header {
     left: 0;
     width: 100%;
     padding: 35px 0;
-    /* Mayor espacio exterior */
     z-index: 1000;
     transition: all 0.4s var(--ease-out-expo);
     pointer-events: none;
@@ -192,14 +191,12 @@ header {
     transition: all 0.4s var(--ease-out-expo);
     border-radius: 60px;
     padding: 10px 30px;
-    /* Mayor espacio interior */
     background: transparent;
     border: 1px solid transparent;
 }
 
 .logo img {
     height: clamp(35px, 5vw, 55px);
-    /* Logo más grande */
     transition: height 0.3s;
     z-index: 1001;
     position: relative;
@@ -213,7 +210,6 @@ header {
 .nav-links {
     display: flex;
     gap: clamp(25px, 3.5vw, 50px);
-    /* Mayor separación en menú */
     list-style: none;
 }
 
@@ -221,7 +217,6 @@ header {
     color: var(--text-primary);
     text-decoration: none;
     font-size: 1.1rem;
-    /* Letra más grande */
     font-weight: 600;
     letter-spacing: 1.5px;
     position: relative;
@@ -254,12 +249,10 @@ header {
     background: linear-gradient(90deg, var(--brand-blue), var(--brand-cyan));
     color: #fff;
     padding: 15px 35px;
-    /* Botón más espacioso */
     border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.05rem;
-    /* Letra del botón más grande */
     letter-spacing: 1px;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 15px rgba(0, 229, 255, 0.2);
@@ -297,7 +290,6 @@ header {
 
 header.scrolled {
     padding: 20px 0;
-    /* Mayor altura al hacer scroll */
 }
 
 header.scrolled .nav-container {
@@ -306,23 +298,20 @@ header.scrolled .nav-container {
     -webkit-backdrop-filter: blur(25px);
     border: 1px solid rgba(0, 229, 255, 0.2);
     padding: 15px 35px;
-    /* Espacio interior generoso */
     width: 90%;
     max-width: 1100px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 /* =========================================
-   INICIO / HERO (Ajustado para mayor tamaño)
+   INICIO / HERO
    ========================================= */
 .hero-section {
     position: relative;
     min-height: 95vh;
-    /* Ocupa más alto de la pantalla */
     display: flex;
     align-items: center;
     padding: 180px 5% 80px 5%;
-    /* Más espacio arriba y abajo */
 }
 
 .hero-content {
@@ -339,11 +328,9 @@ header.scrolled .nav-container {
     align-items: center;
     gap: 10px;
     padding: 10px 24px;
-    /* Más grande el recuadro */
     border: 1px solid rgba(0, 229, 255, 0.3);
     border-radius: 50px;
     font-size: 1rem;
-    /* Letra de badge más grande */
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -355,7 +342,6 @@ header.scrolled .nav-container {
 
 .pulse-dot {
     width: 10px;
-    /* Punto más grande */
     height: 10px;
     background-color: var(--brand-cyan);
     border-radius: 50%;
@@ -382,7 +368,6 @@ header.scrolled .nav-container {
 
 .hero-content h1 {
     font-size: clamp(3.5rem, 8vw, 7.5rem);
-    /* Título hero bastante más grande */
     font-weight: 700;
     margin-bottom: 40px;
     color: #ffffff;
@@ -400,10 +385,8 @@ header.scrolled .nav-container {
 .terminal-prompt {
     font-family: var(--font-code);
     font-size: clamp(1.1rem, 3vw, 1.4rem);
-    /* Texto terminal más grande */
     color: var(--text-primary);
     padding: 20px 30px;
-    /* Panel de terminal más espacioso */
     display: inline-block;
     max-width: 100%;
 }
@@ -426,7 +409,7 @@ header.scrolled .nav-container {
 }
 
 /* =========================================
-   DISEÑO DIVIDIDO (PERFIL)
+   DISEÑO DIVIDIDO (PERFIL) MODIFICADO
    ========================================= */
 .split-layout {
     display: grid;
@@ -442,39 +425,50 @@ header.scrolled .nav-container {
 
 .stats-grid {
     display: flex;
-    gap: clamp(15px, 4vw, 25px);
+    gap: clamp(15px, 3vw, 25px);
     margin-top: 25px;
     flex-wrap: wrap;
 }
 
 .stat-box {
-    padding: 18px 25px;
+    padding: 20px 25px;
     flex: 1;
-    min-width: 130px;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: border-color 0.3s, background 0.3s;
+    transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
 .stat-box:hover {
     border-color: rgba(0, 229, 255, 0.5);
     background: rgba(0, 229, 255, 0.05);
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    color: var(--brand-cyan);
+    margin-bottom: 12px;
+    padding: 10px;
+    background: rgba(0, 229, 255, 0.1);
+    border-radius: 8px;
+    display: inline-flex;
 }
 
 .stat-number {
-    font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: 700;
-    color: var(--brand-cyan);
-    margin-bottom: 4px;
+    color: #ffffff;
+    margin-bottom: 6px;
 }
 
 .stat-label {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 /* LOGO INTERACTIVO */
@@ -1067,7 +1061,7 @@ header.scrolled .nav-container {
 }
 
 /* =========================================
-   MEDIA QUERIES (MÓVILES - DISEÑO RESPONSIVO Y MÁS GRANDE)
+   MEDIA QUERIES
    ========================================= */
 @media (max-width: 900px) {
     .orb-1 {
@@ -1146,7 +1140,6 @@ header.scrolled .nav-container {
         width: 95%;
         border-radius: 50px;
         padding: 15px 25px;
-        /* Mayor espacio interior en móvil también */
     }
 
     .nav-menu {
@@ -1159,7 +1152,6 @@ header.scrolled .nav-container {
         -webkit-backdrop-filter: blur(25px);
         flex-direction: column;
         padding: 35px 5%;
-        /* Mayor espacio interior para el menú móvil */
         border: 1px solid rgba(0, 229, 255, 0.15);
         border-radius: 20px;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
@@ -1180,7 +1172,6 @@ header.scrolled .nav-container {
         flex-direction: column;
         text-align: center;
         gap: 25px;
-        /* Más espaciado entre links */
         font-size: 1.2rem;
     }
 
