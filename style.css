@@ -68,8 +68,8 @@ h3,
     position: absolute;
     border-radius: 50%;
     filter: blur(120px);
-    opacity: 0.5;
-    animation: orbFloat 15s infinite alternate ease-in-out;
+    /* La opacidad estática se eliminó, ahora la controla la animación para el efecto de atenuado */
+    animation: orbFloat 25s infinite ease-in-out;
 }
 
 .orb-1 {
@@ -78,6 +78,8 @@ h3,
     background-color: var(--brand-blue);
     top: -10%;
     left: -10%;
+    animation-duration: 16s;
+    /* Reducido de 25s para más velocidad */
 }
 
 .orb-2 {
@@ -87,6 +89,8 @@ h3,
     bottom: -5%;
     right: -5%;
     animation-delay: -5s;
+    animation-duration: 13s;
+    /* Reducido de 22s */
 }
 
 .orb-3 {
@@ -96,15 +100,37 @@ h3,
     top: 40%;
     left: 30%;
     animation-delay: -10s;
+    animation-duration: 19s;
+    /* Reducido de 28s */
 }
 
+/* Animación ajustada: Opacidades más altas para mayor iluminación */
 @keyframes orbFloat {
     0% {
         transform: translate(0, 0) scale(1);
+        opacity: 0.35;
+        /* Antes 0.2 - El punto más oscuro ahora es más claro */
+    }
+
+    25% {
+        opacity: 0.85;
+        /* Antes 0.6 - Mayor brillo */
+    }
+
+    50% {
+        transform: translate(15%, 15%) scale(1.15);
+        opacity: 0.45;
+        /* Antes 0.3 */
+    }
+
+    75% {
+        opacity: 0.95;
+        /* Antes 0.7 - Casi opacidad total en el pico de luz */
     }
 
     100% {
-        transform: translate(15%, 15%) scale(1.1);
+        transform: translate(0, 0) scale(1);
+        opacity: 0.35;
     }
 }
 
