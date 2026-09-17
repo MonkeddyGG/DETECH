@@ -68,7 +68,6 @@ h3,
     position: absolute;
     border-radius: 50%;
     filter: blur(120px);
-    /* La opacidad estática se eliminó, ahora la controla la animación para el efecto de atenuado */
     animation: orbFloat 25s infinite ease-in-out;
 }
 
@@ -79,7 +78,6 @@ h3,
     top: -10%;
     left: -10%;
     animation-duration: 16s;
-    /* Reducido de 25s para más velocidad */
 }
 
 .orb-2 {
@@ -90,7 +88,6 @@ h3,
     right: -5%;
     animation-delay: -5s;
     animation-duration: 13s;
-    /* Reducido de 22s */
 }
 
 .orb-3 {
@@ -101,31 +98,25 @@ h3,
     left: 30%;
     animation-delay: -10s;
     animation-duration: 19s;
-    /* Reducido de 28s */
 }
 
-/* Animación ajustada: Opacidades más altas para mayor iluminación */
 @keyframes orbFloat {
     0% {
         transform: translate(0, 0) scale(1);
         opacity: 0.35;
-        /* Antes 0.2 - El punto más oscuro ahora es más claro */
     }
 
     25% {
         opacity: 0.85;
-        /* Antes 0.6 - Mayor brillo */
     }
 
     50% {
         transform: translate(15%, 15%) scale(1.15);
         opacity: 0.45;
-        /* Antes 0.3 */
     }
 
     75% {
         opacity: 0.95;
-        /* Antes 0.7 - Casi opacidad total en el pico de luz */
     }
 
     100% {
@@ -675,12 +666,12 @@ header.scrolled .nav-container {
     letter-spacing: 1px;
 }
 
+
 /* =========================================
    NUESTRO PROCESO (2x2 CORPORATIVO Y RESPONSIVO)
    ========================================= */
 .process-grid {
     display: grid;
-    /* Fuerza estrictamente 2 columnas sin importar el dispositivo */
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(15px, 3vw, 30px);
     position: relative;
@@ -695,7 +686,6 @@ header.scrolled .nav-container {
     z-index: 1;
     transition: transform 0.4s var(--ease-out-expo), border-color 0.4s, box-shadow 0.4s;
     overflow: hidden;
-    /* Cajas más grandes y simétricas */
     min-height: clamp(240px, 35vw, 380px);
     display: flex;
     flex-direction: column;
@@ -851,94 +841,6 @@ header.scrolled .nav-container {
     color: var(--text-muted);
     line-height: 1.7;
     font-weight: 400;
-}
-
-/* =========================================
-   PROYECTOS
-   ========================================= */
-.marquee-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding: 20px 0;
-}
-
-.marquee-container::before,
-.marquee-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 100px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.marquee-container::before {
-    left: 0;
-    background: linear-gradient(to right, #010308, transparent);
-}
-
-.marquee-container::after {
-    right: 0;
-    background: linear-gradient(to left, #010308, transparent);
-}
-
-.marquee-track {
-    display: flex;
-    width: max-content;
-    animation: scroll-horizontal 40s linear infinite;
-}
-
-.marquee-track:hover {
-    animation-play-state: paused;
-}
-
-.project-item {
-    width: clamp(400px, 45vw, 700px);
-    aspect-ratio: 16/9;
-    margin: 0 15px;
-    border-radius: 16px;
-    position: relative;
-    display: block;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.project-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s var(--ease-out-expo), filter 0.6s;
-    filter: grayscale(40%) brightness(0.7);
-}
-
-.project-glow {
-    position: absolute;
-    inset: 0;
-    box-shadow: inset 0 0 30px rgba(0, 229, 255, 0);
-    z-index: 1;
-    transition: box-shadow 0.3s, border 0.3s;
-}
-
-.project-item:hover img {
-    transform: scale(1.05);
-    filter: grayscale(0%) brightness(1.1);
-}
-
-.project-item:hover .project-glow {
-    box-shadow: inset 0 0 60px rgba(0, 229, 255, 0.5);
-    border: 2px solid rgba(0, 229, 255, 0.8);
-}
-
-@keyframes scroll-horizontal {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(calc(-50% - 15px));
-    }
 }
 
 /* =========================================
@@ -1186,8 +1088,173 @@ header.scrolled .nav-container {
     transition-delay: 0.45s;
 }
 
+
 /* =========================================
-   MEDIA QUERIES
+   PROYECTOS RECIENTES (MOCKUPS SUPERPUESTOS)
+   ========================================= */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 30px 0;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, #010308, transparent);
+}
+
+.marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, #010308, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-horizontal 70s linear infinite;
+    align-items: center;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+/* Modificación de tu Project Item original para albergar ambos mockups */
+.project-item.mockup-combo {
+    width: clamp(550px, 60vw, 850px);
+    margin: 0 40px;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    display: block;
+    overflow: visible;
+    cursor: pointer;
+    text-decoration: none;
+    flex-shrink: 0;
+    /* SOLUCIÓN: Evita que el carrusel aplaste los mockups */
+}
+
+/* Estructura Posicional */
+.devices-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* --- MOCKUP DE LA LAPTOP --- */
+.mockup-laptop {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.mockup-laptop .device-image {
+    width: 100%;
+    display: block;
+    height: auto;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.7));
+}
+
+.screen-content-laptop {
+    position: absolute;
+    /* Ajustes porcentuales para centrar la captura */
+    top: 8%;
+    left: 12.55%;
+    width: 75%;
+    height: 81%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+
+    /* GUÍA VISUAL PARA CALIBRAR: Cambia top/left/width/height hasta que encaje.
+       Borra esta línea de border cuando esté perfecto. */
+
+}
+
+.screen-content-laptop img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: object-position 5s ease-in-out;
+}
+
+/* --- MOCKUP DEL CELULAR --- */
+.mockup-celular {
+    position: absolute;
+    right: -10%;
+    bottom: -35px;
+    width: 35%;
+    min-width: 170px;
+    z-index: 5;
+}
+
+.mockup-celular .device-image {
+    width: 125%;
+    display: block;
+    height: auto;
+    filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.8));
+}
+
+.screen-content-celular {
+    position: absolute;
+    /* Ajustes porcentuales para centrar la captura */
+    top: 6%;
+    left: 36.8%;
+    width: 54.5%;
+    height: 87%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+
+    /* GUÍA VISUAL PARA CALIBRAR: Cambia top/left/width/height hasta que encaje.
+       Borra esta línea de border cuando esté perfecto. */
+    border: 3px
+}
+
+.screen-content-celular img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: object-position 5s ease-in-out;
+}
+
+/* --- EFECTO AUTO-SCROLL CSS --- */
+.project-item.mockup-combo:hover .screen-content-laptop img,
+.project-item.mockup-combo:hover .screen-content-celular img {
+    object-position: bottom;
+}
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100%));
+    }
+}
+
+/* =========================================
+   MEDIA QUERIES GLOBALES Y RESPONSIVAS
    ========================================= */
 @media (max-width: 900px) {
     .orb-1 {
@@ -1349,6 +1416,12 @@ header.scrolled .nav-container {
         border-width: 6px 6px 0 6px;
         border-color: rgba(0, 229, 255, 0.4) transparent transparent transparent;
         transform: none;
+    }
+
+    /* Ajuste para celulares en los nuevos mockups */
+    .project-item.mockup-combo {
+        width: clamp(320px, 85vw, 500px);
+        margin: 0 20px;
     }
 }
 

@@ -28,7 +28,7 @@
     <meta name="twitter:image" content="https://detech-dev.vercel.app/assets/preview-detech.png">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Nuevas Fuentes: Space Grotesk (Títulos/Tech) y Urbanist (Cuerpo/Profesional) + JetBrains (Código) -->
+    <!-- Nuevas Fuentes -->
     <link
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&family=Urbanist:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
@@ -70,14 +70,13 @@
     </header>
 
     <main>
-        <!-- Sección Hero con Fondo Global -->
+        <!-- Sección Hero -->
         <section id="inicio" class="hero-section">
             <div class="hero-content reveal">
                 <div class="badge">
                     <span class="pulse-dot"></span>
                     Diego Tellez
                 </div>
-                <!-- Título actualizado con blanco y WEB en Neón -->
                 <h1>MARKETING <br>DESARROLLO<br>Y DISEÑO <span class="text-neon">WEB</span></h1>
                 <div class="terminal-prompt glass-panel">
                     <span class="prompt-arrow"> ❯</span>
@@ -86,7 +85,7 @@
             </div>
         </section>
 
-        <!-- Sección Perfil (Motor DETECH en 3D) MODIFICADA -->
+        <!-- Sección Perfil -->
         <section id="perfil" class="section-padding">
             <div class="container split-layout relative-z">
                 <div class="text-content reveal">
@@ -143,7 +142,7 @@
             </div>
         </section>
 
-        <!-- NUEVA SECCIÓN: Nuestro Proceso (Corporativo, Simétrico 2x2) -->
+        <!-- Nuestro Proceso -->
         <section id="proceso" class="section-padding">
             <div class="container reveal">
                 <h2 class="section-title">METODOLOGÍA <span class="text-gradient">ESTRATÉGICA</span></h2>
@@ -225,13 +224,12 @@
             </div>
         </section>
 
-        <!-- Sección Servicios (Grid Alternado Horizontal) -->
+        <!-- Sección Servicios -->
         <section id="servicios" class="section-padding">
             <div class="container reveal">
                 <h2 class="section-title">ECOSISTEMA DE SERVICIOS</h2>
 
                 <div class="services-list">
-                    <!-- Tarjeta 1: Imagen Izquierda, Texto Derecha -->
                     <article class="service-row glass-panel reveal">
                         <div class="service-img" style="background-image: url('assets/mockup1.png');"></div>
                         <div class="service-content">
@@ -248,7 +246,6 @@
                         </div>
                     </article>
 
-                    <!-- Tarjeta 2: Imagen Derecha, Texto Izquierda (Usando la clase 'reverse') -->
                     <article class="service-row reverse glass-panel reveal delay-1">
                         <div class="service-img" style="background-image: url('assets/mockup6.jpg');"></div>
                         <div class="service-content">
@@ -267,7 +264,6 @@
                         </div>
                     </article>
 
-                    <!-- Tarjeta 3: Imagen Izquierda, Texto Derecha -->
                     <article class="service-row glass-panel reveal delay-1">
                         <div class="service-img" style="background-image: url('assets/mockup2.png');"></div>
                         <div class="service-content">
@@ -287,20 +283,74 @@
             </div>
         </section>
 
-        <!-- Sección Proyectos (Carrusel Escritorio) -->
+        <!-- SECCIÓN PROYECTOS ACTUALIZADA CON MOCKUPS -->
         <section id="proyectos" class="section-padding">
             <h2 class="section-title reveal">PROYECTOS RECIENTES</h2>
             <div class="marquee-container reveal delay-1">
                 <div class="marquee-track" id="marquee-track-proyectos">
-                    <a href="https://calentadorescalderas.com.mx/" class="project-item">
-                        <div class="project-glow"></div><img src="assets/proyecto1.png" alt="Proyecto 1">
+
+                    <!-- PROYECTO 1 -->
+                    <a href="https://calentadorescalderas.com.mx/" class="project-item mockup-combo" target="_blank">
+                        <div class="devices-container">
+                            <!-- Laptop -->
+                            <div class="mockup-laptop">
+                                <img src="./assets/Laptop.png" alt="Laptop" class="device-image">
+                                <div class="screen-content-laptop">
+                                    <!-- Captura Desktop Proyecto 1 -->
+                                    <img src="./assets/proyecto1.png" alt="Calentadores Calderas Desktop">
+                                </div>
+                            </div>
+                            <!-- Celular -->
+                            <div class="mockup-celular">
+                                <img src="./assets/celular.png" alt="Celular" class="device-image">
+                                <div class="screen-content-celular">
+                                    <!-- Captura Mobile Proyecto 1 -->
+                                    <img src="./assets/proyecto_cel_calderas.jpeg" alt="Calentadores Calderas Mobile">
+                                </div>
+                            </div>
+                        </div>
                     </a>
-                    <a href="https://alitasdival.vercel.app/#" class="project-item">
-                        <div class="project-glow"></div><img src="assets/proyecto2.png" alt="Proyecto 2">
+
+                    <!-- PROYECTO 2 -->
+                    <a href="https://alitasdival.vercel.app/#" class="project-item mockup-combo" target="_blank">
+                        <div class="devices-container">
+                            <div class="mockup-laptop">
+                                <img src="./assets/Laptop.png" alt="Laptop" class="device-image">
+                                <div class="screen-content-laptop">
+                                    <!-- Captura Desktop Proyecto 2 -->
+                                    <img src="./assets/Captura_AlitasDival.png" alt="Alitas Dival Desktop">
+                                </div>
+                            </div>
+                            <div class="mockup-celular">
+                                <img src="./assets/celular.png" alt="Celular" class="device-image">
+                                <div class="screen-content-celular">
+                                    <!-- Captura Mobile Proyecto 2 -->
+                                    <img src="./assets/proyecto_cel_alitasdival.jpeg" alt="Alitas Dival Mobile">
+                                </div>
+                            </div>
+                        </div>
                     </a>
-                    <a href="https://fisiozully.vercel.app/" class="project-item">
-                        <div class="project-glow"></div><img src="assets/proyecto3.png" alt="Proyecto 3">
+
+                    <!-- PROYECTO 3 -->
+                    <a href="https://fisiozully.vercel.app/" class="project-item mockup-combo" target="_blank">
+                        <div class="devices-container">
+                            <div class="mockup-laptop">
+                                <img src="assets/Laptop.png" alt="Laptop" class="device-image">
+                                <div class="screen-content-laptop">
+                                    <!-- Captura Desktop Proyecto 3 -->
+                                    <img src="assets/proyecto3.png" alt="FisioZully Desktop">
+                                </div>
+                            </div>
+                            <div class="mockup-celular">
+                                <img src="assets/celular.png" alt="Celular" class="device-image">
+                                <div class="screen-content-celular">
+                                    <!-- Captura Mobile Proyecto 3 -->
+                                    <img src="./assets/proyecto_cel_zully.jpeg" alt="FisioZully Mobile">
+                                </div>
+                            </div>
+                        </div>
                     </a>
+
                 </div>
             </div>
         </section>
@@ -353,11 +403,12 @@
                 <div class="form-wrapper glass-panel whatsapp-action-panel">
                     <a href="https://wa.me/5574211364" target="_blank" class="glowing-btn text-center"
                         style="display: block; text-decoration: none;">
-                        <span>COMENCEMOS CON SU IDEA</span>
+                        <span>COTIZACIÓN GRATUITA</span>
                     </a>
                 </div>
             </div>
         </section>
+
         <!-- Sección FAQ -->
         <section id="faq" class="section-padding">
             <div class="container reveal">
