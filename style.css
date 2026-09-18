@@ -1171,7 +1171,7 @@ header.scrolled .nav-container {
 .screen-content-laptop {
     position: absolute;
     /* Ajustes porcentuales para centrar la captura */
-    top: 8%;
+    top: 7%;
     left: 12.55%;
     width: 75%;
     height: 81%;
@@ -1214,11 +1214,11 @@ header.scrolled .nav-container {
 .screen-content-celular {
     position: absolute;
     /* Ajustes porcentuales para centrar la captura */
-    top: 6%;
+    top: 4.8%;
     left: 36.8%;
     width: 54.5%;
-    height: 87%;
-    border-radius: 12px;
+    height: 89.5%;
+    border-radius: 20px;
     overflow: hidden;
     background: #000;
 
