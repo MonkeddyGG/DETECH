@@ -1181,17 +1181,13 @@ header.scrolled .nav-container {
 
     /* GUÍA VISUAL PARA CALIBRAR: Cambia top/left/width/height hasta que encaje.
        Borra esta línea de border cuando esté perfecto. */
-
 }
 
 .screen-content-laptop img {
     width: 100%;
-    height: auto;
-    min-height: 100%;
-    object-fit: cover;
-    object-position: top;
+    height: 100%;
+    object-fit: fill;
     display: block;
-    transition: object-position 5s ease-in-out;
 }
 
 /* --- MOCKUP DEL CELULAR --- */
@@ -1213,7 +1209,6 @@ header.scrolled .nav-container {
 
 .screen-content-celular {
     position: absolute;
-    /* Ajustes porcentuales para centrar la captura */
     top: 4.8%;
     left: 36.8%;
     width: 54.5%;
@@ -1221,27 +1216,16 @@ header.scrolled .nav-container {
     border-radius: 20px;
     overflow: hidden;
     background: #000;
-
-    /* GUÍA VISUAL PARA CALIBRAR: Cambia top/left/width/height hasta que encaje.
-       Borra esta línea de border cuando esté perfecto. */
-    border: 3px
 }
 
 .screen-content-celular img {
     width: 100%;
-    height: auto;
-    min-height: 100%;
-    object-fit: cover;
-    object-position: top;
+    height: 100%;
+    object-fit: fill;
     display: block;
-    transition: object-position 5s ease-in-out;
 }
 
-/* --- EFECTO AUTO-SCROLL CSS --- */
-.project-item.mockup-combo:hover .screen-content-laptop img,
-.project-item.mockup-combo:hover .screen-content-celular img {
-    object-position: bottom;
-}
+/* EL BLOQUE DEL EFECTO AUTO-SCROLL FUE ELIMINADO POR COMPLETO */
 
 @keyframes scroll-horizontal {
     0% {
