@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 obs.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
     reveals.forEach(el => observer.observe(el));
 
@@ -59,6 +59,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (marqueeTrackProyectos) {
         marqueeTrackProyectos.innerHTML += marqueeTrackProyectos.innerHTML;
     }
+
+    /* --- FAQ ACORDEÓN INTERACTIVO --- */
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const questionBtn = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        questionBtn.addEventListener('click', () => {
+            const isOpen = item.classList.contains('active');
+
+            // Cerrar todos los demás primero
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-answer').style.maxHeight = null;
+            });
+
+            // Si no estaba abierto, lo abrimos
+            if (!isOpen) {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+        });
+    });
 
     /* --- EFECTO TILT 3D PARA EL LOGO DEL MOTOR DETECH --- */
     const interactiveLogo = document.getElementById('interactive-logo');

@@ -5,16 +5,17 @@
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>DETECH | Marketing, Desarrollo y Diseño Web</title>
+    <title>DETECH | Agencia de Desarrollo, Diseño Web y Marketing</title>
 
     <!-- Meta Etiquetas Básicas -->
-    <meta name="description" content="Agencia de Marketing y Desarrollo Web. Código a Medida, Posicionamiento.">
+    <meta name="description"
+        content="Agencia de Marketing y Desarrollo Web. Sitios escalables, código a medida y posicionamiento estratégico.">
     <meta name="author" content="DETECH">
 
     <!-- Open Graph / WhatsApp / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://detech-dev.vercel.app/">
-    <meta property="og:title" content="DETECH — Construimos arquitecturas digitales">
+    <meta property="og:title" content="DETECH — Arquitecturas Digitales de Alto Rendimiento">
     <meta property="og:description"
         content="Agencia de Diseño y Desarrollo Web. Sitios Optimizados, Marketing Digital.">
     <meta property="og:image" content="https://detech-dev.vercel.app/assets/preview-detech.png">
@@ -22,13 +23,16 @@
     <!-- Twitter Cards  -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://detech-dev.vercel.app/">
-    <meta name="twitter:title" content="DETECH — Construimos arquitecturas digitales">
+    <meta name="twitter:title" content="DETECH — Arquitecturas Digitales de Alto Rendimiento">
     <meta name="twitter:description"
         content="Agencia de Diseño y Desarrollo Web. Sitios Optimizados, Marketing Digital.">
     <meta name="twitter:image" content="https://detech-dev.vercel.app/assets/preview-detech.png">
+
     <link rel="stylesheet" href="style.css">
 
-    <!-- Nuevas Fuentes -->
+    <!-- Fuentes Modernas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&family=Urbanist:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
@@ -50,7 +54,7 @@
                 <img src="assets/LOGO-DETECH.png" alt="DETECH Logo" id="logo-img">
             </a>
 
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -62,10 +66,13 @@
                     <li><a href="#perfil" class="nav-link">PERFIL</a></li>
                     <li><a href="#servicios" class="nav-link">SERVICIOS</a></li>
                     <li><a href="#proyectos" class="nav-link">PROYECTOS</a></li>
+                    <li><a href="#testimonios" class="nav-link">TESTIMONIOS</a></li>
                 </ul>
-                <a href="https://wa.me/5574211364" target="_blank" class="btn-contact mobile-only">CONTACTAR</a>
+                <a href="https://wa.me/5574211364" target="_blank" rel="noopener"
+                    class="btn-contact mobile-only">CONTACTAR</a>
             </nav>
-            <a href="https://wa.me/5574211364" target="_blank" class="btn-contact desktop-only">CONTACTAR</a>
+            <a href="https://wa.me/5574211364" target="_blank" rel="noopener"
+                class="btn-contact desktop-only">CONTACTAR</a>
         </div>
     </header>
 
@@ -75,11 +82,11 @@
             <div class="hero-content reveal">
                 <div class="badge">
                     <span class="pulse-dot"></span>
-                    Diego Tellez
+                    Agencia Digital
                 </div>
-                <h1>MARKETING <br>DESARROLLO<br>Y DISEÑO <span class="text-neon">WEB</span></h1>
+                <h1>DESARROLLO<br>DISEÑO Y<br>MARKETING <span class="text-neon">WEB</span></h1>
                 <div class="terminal-prompt glass-panel">
-                    <span class="prompt-arrow"> ❯</span>
+                    <span class="prompt-arrow">❯</span>
                     <span id="typewriter-text"></span><span class="cursor-blink">_</span>
                 </div>
             </div>
@@ -91,9 +98,11 @@
                 <div class="text-content reveal">
                     <h2 class="section-title left-align">El motor detrás de <span class="text-gradient">DETECH</span>
                     </h2>
-                    <p class="lead-text">Detrás de cada línea de código hay un equipo humano comprometido con tu éxito.
+                    <p class="lead-text">
+                        Detrás de cada línea de código hay un equipo humano comprometido con tu éxito.
                         No solo creamos páginas visualmente impactantes, diseñamos herramientas digitales rápidas,
-                        seguras y pensadas para que tus clientes confíen en tu negocio desde el primer clic.</p>
+                        seguras y pensadas para que tus clientes confíen en tu negocio desde el primer clic.
+                    </p>
 
                     <div class="stats-grid">
                         <div class="stat-box glass-panel">
@@ -107,7 +116,7 @@
                                 </svg>
                             </div>
                             <span class="stat-number">Conexión</span>
-                            <span class="stat-label">Experiencia fácil para tus clientes</span>
+                            <span class="stat-label">Experiencia fluida y centrada en el usuario</span>
                         </div>
                         <div class="stat-box glass-panel">
                             <div class="stat-icon">
@@ -117,7 +126,7 @@
                                 </svg>
                             </div>
                             <span class="stat-number">Respaldo</span>
-                            <span class="stat-label">Sitios rápidos, seguros y sin fallas</span>
+                            <span class="stat-label">Infraestructura rápida, segura y escalable</span>
                         </div>
                     </div>
                 </div>
@@ -143,82 +152,70 @@
         </section>
 
         <!-- Nuestro Proceso -->
-        <section id="proceso" class="section-padding">
+        <section id="proceso" class="section-padding bg-subtle">
             <div class="container reveal">
                 <h2 class="section-title">METODOLOGÍA <span class="text-gradient">ESTRATÉGICA</span></h2>
-                <p class="lead-text" style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
+                <p class="lead-text text-center mx-auto" style="max-width: 800px; margin-bottom: 50px;">
                     Transformamos la visión de su empresa en soluciones digitales de alto impacto mediante un enfoque
-                    estructurado y orientado a resultados.</p>
+                    estructurado y orientado a resultados.
+                </p>
 
                 <div class="process-grid">
-                    <!-- Paso 1 -->
                     <div class="process-step glass-panel reveal">
                         <div class="step-number">01</div>
                         <div class="step-icon">
-                            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="11" cy="11" r="8"></circle>
                                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                             </svg>
                         </div>
-                        <h3>Consultoría y Análisis Diagnóstico</h3>
-                        <p>Realizamos una inmersión profunda en su modelo de negocio. Evaluamos objetivos corporativos,
-                            KPIs y mercado meta para estructurar una solución tecnológica completamente alineada a su
-                            visión.</p>
+                        <h3>Consultoría y Diagnóstico</h3>
+                        <p>Inmersión profunda en su modelo de negocio. Evaluamos objetivos, KPIs y mercado meta para
+                            estructurar una solución a medida.</p>
                     </div>
 
-                    <!-- Paso 2 -->
                     <div class="process-step glass-panel reveal delay-1">
                         <div class="step-number">02</div>
                         <div class="step-icon">
-                            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                                 <polyline points="2 17 12 22 22 17"></polyline>
                                 <polyline points="2 12 12 17 22 12"></polyline>
                             </svg>
                         </div>
-                        <h3>Diseño Arquitectónico y UI/UX</h3>
-                        <p>Definimos la identidad corporativa y la arquitectura de la información. Diseñamos interfaces
-                            intuitivas enfocadas estrictamente en la retención, conversión y la mejor experiencia de
-                            usuario.</p>
+                        <h3>Diseño UI/UX</h3>
+                        <p>Definimos la identidad corporativa y la arquitectura visual. Interfaces intuitivas enfocadas
+                            en retención y conversión.</p>
                     </div>
 
-                    <!-- Paso 3 -->
                     <div class="process-step glass-panel reveal delay-2">
                         <div class="step-number">03</div>
                         <div class="step-icon">
-                            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M8 6L2 12l6 6"></path>
                                 <path d="M16 18l6-6-6-6"></path>
-                                <path d="M13 4l-3 16"></path>
                             </svg>
                         </div>
-                        <h3>Desarrollo y Despliegue Técnico</h3>
-                        <p>Implementamos metodologías ágiles para construir infraestructuras robustas, escalables y
-                            seguras. Maximizamos el rendimiento del servidor y la optimización SEO desde el código
-                            fuente.</p>
+                        <h3>Desarrollo Técnico</h3>
+                        <p>Metodologías ágiles para construir infraestructuras seguras. Maximizamos el rendimiento y la
+                            optimización SEO del código.</p>
                     </div>
 
-                    <!-- Paso 4 -->
                     <div class="process-step glass-panel reveal delay-3">
                         <div class="step-number">04</div>
                         <div class="step-icon">
-                            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5a5.4 5.4 0 0 0 1-4.65 9.2 9.2 0 0 1-2.5-2.5 5.4 5.4 0 0 0-4.65 1l-.5.5z">
-                                </path>
                                 <path d="M12 2.53a5.18 5.18 0 0 1 7.47 0 5.18 5.18 0 0 1 0 7.47L12 17.5l-5-5 7.5-7.47z">
                                 </path>
-                                <circle cx="15.5" cy="8.5" r="1.5"></circle>
                             </svg>
                         </div>
-                        <h3>Implementación y Soporte Continuo</h3>
-                        <p>Ejecutamos el despliegue del proyecto bajo estrictos protocolos de calidad. Ofrecemos
-                            mantenimiento evolutivo y monitoreo para asegurar el crecimiento sostenido de su ecosistema
-                            digital.</p>
+                        <h3>Soporte Continuo</h3>
+                        <p>Despliegue bajo estrictos protocolos de calidad. Mantenimiento evolutivo para asegurar el
+                            crecimiento sostenido digital.</p>
                     </div>
                 </div>
             </div>
@@ -227,7 +224,7 @@
         <!-- Sección Servicios -->
         <section id="servicios" class="section-padding">
             <div class="container reveal">
-                <h2 class="section-title">ECOSISTEMA DE SERVICIOS</h2>
+                <h2 class="section-title">ECOSISTEMA DE <span class="text-gradient">SERVICIOS</span></h2>
 
                 <div class="services-list">
                     <article class="service-row glass-panel reveal">
@@ -258,9 +255,9 @@
                                     <circle cx="11" cy="11" r="2"></circle>
                                 </svg>
                             </div>
-                            <h3>Diseño Gráfico</h3>
+                            <h3>Diseño Gráfico y Branding</h3>
                             <p>Identidad visual, branding y logotipos creados con precisión para destacar tu marca
-                                frente a la competencia. Diseñamos con propósito y estética.</p>
+                                frente a la competencia. Diseñamos con propósito y estética moderna.</p>
                         </div>
                     </article>
 
@@ -274,7 +271,7 @@
                                     <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
                                 </svg>
                             </div>
-                            <h3>Marketing Digital</h3>
+                            <h3>Marketing Digital & SEO</h3>
                             <p>Estrategias de posicionamiento SEO, gestión de campañas y contenido para conectar con tu
                                 audiencia ideal. Hacemos que tu mensaje llegue a las personas correctas.</p>
                         </div>
@@ -283,28 +280,25 @@
             </div>
         </section>
 
-        <!-- SECCIÓN PROYECTOS ACTUALIZADA CON MOCKUPS -->
-        <section id="proyectos" class="section-padding">
-            <h2 class="section-title reveal">PROYECTOS RECIENTES</h2>
+        <!-- Proyectos -->
+        <section id="proyectos" class="section-padding bg-subtle">
+            <h2 class="section-title reveal">PROYECTOS <span class="text-gradient">DESTACADOS</span></h2>
             <div class="marquee-container reveal delay-1">
                 <div class="marquee-track" id="marquee-track-proyectos">
 
                     <!-- PROYECTO 1 -->
-                    <a href="https://calentadorescalderas.com.mx/" class="project-item mockup-combo" target="_blank">
+                    <a href="https://calentadorescalderas.com.mx/" class="project-item mockup-combo" target="_blank"
+                        rel="noopener">
                         <div class="devices-container">
-                            <!-- Laptop -->
                             <div class="mockup-laptop">
                                 <img src="./assets/Laptop.png" alt="Laptop" class="device-image">
                                 <div class="screen-content-laptop">
-                                    <!-- Captura Desktop Proyecto 1 -->
                                     <img src="./assets/proyecto1.png" alt="Calentadores Calderas Desktop">
                                 </div>
                             </div>
-                            <!-- Celular -->
                             <div class="mockup-celular">
                                 <img src="./assets/celular.png" alt="Celular" class="device-image">
                                 <div class="screen-content-celular">
-                                    <!-- Captura Mobile Proyecto 1 -->
                                     <img src="./assets/proyecto_cel_calderas.jpeg" alt="Calentadores Calderas Mobile">
                                 </div>
                             </div>
@@ -312,19 +306,18 @@
                     </a>
 
                     <!-- PROYECTO 2 -->
-                    <a href="https://alitasdival.vercel.app/#" class="project-item mockup-combo" target="_blank">
+                    <a href="https://alitasdival.vercel.app/#" class="project-item mockup-combo" target="_blank"
+                        rel="noopener">
                         <div class="devices-container">
                             <div class="mockup-laptop">
                                 <img src="./assets/Laptop.png" alt="Laptop" class="device-image">
                                 <div class="screen-content-laptop">
-                                    <!-- Captura Desktop Proyecto 2 -->
                                     <img src="./assets/Captura_AlitasDival.png" alt="Alitas Dival Desktop">
                                 </div>
                             </div>
                             <div class="mockup-celular">
                                 <img src="./assets/celular.png" alt="Celular" class="device-image">
                                 <div class="screen-content-celular">
-                                    <!-- Captura Mobile Proyecto 2 -->
                                     <img src="./assets/proyecto_cel_alitasdival.jpeg" alt="Alitas Dival Mobile">
                                 </div>
                             </div>
@@ -332,19 +325,18 @@
                     </a>
 
                     <!-- PROYECTO 3 -->
-                    <a href="https://fisiozully.vercel.app/" class="project-item mockup-combo" target="_blank">
+                    <a href="https://fisiozully.vercel.app/" class="project-item mockup-combo" target="_blank"
+                        rel="noopener">
                         <div class="devices-container">
                             <div class="mockup-laptop">
                                 <img src="assets/Laptop.png" alt="Laptop" class="device-image">
                                 <div class="screen-content-laptop">
-                                    <!-- Captura Desktop Proyecto 3 -->
                                     <img src="assets/proyecto3.png" alt="FisioZully Desktop">
                                 </div>
                             </div>
                             <div class="mockup-celular">
                                 <img src="assets/celular.png" alt="Celular" class="device-image">
                                 <div class="screen-content-celular">
-                                    <!-- Captura Mobile Proyecto 3 -->
                                     <img src="./assets/proyecto_cel_zully.jpeg" alt="FisioZully Mobile">
                                 </div>
                             </div>
@@ -355,18 +347,179 @@
             </div>
         </section>
 
+        <!-- Sección Testimonios (MACOS WINDOW) -->
+        <section id="testimonios" class="section-padding">
+            <div class="container reveal">
+                <h2 class="section-title">LO QUE DICEN <span class="text-gradient">NUESTROS CLIENTES</span></h2>
+                <p class="lead-text text-center mx-auto" style="max-width: 800px; margin-bottom: 50px;">
+                    Casos de éxito reales de empresas que han transformado su ecosistema digital junto a DETECH.
+                </p>
+
+                <div class="testimonial-grid">
+
+                    <!-- Testimonio 1 -->
+                    <div class="macos-window glass-panel reveal delay-1">
+                        <div class="macos-header">
+                            <div class="macos-buttons">
+                                <span class="btn-red"></span>
+                                <span class="btn-yellow"></span>
+                                <span class="btn-green"></span>
+                            </div>
+                            <div class="macos-title">calentadorescalderas.com.mx</div>
+                        </div>
+                        <div class="macos-body">
+                            <p class="testimonial-text">La renovación de nuestra plataforma web marcó un antes y un
+                                después en nuestras conversiones. El equipo de DETECH no solo entregó un sitio
+                                excepcionalmente rápido y estético, sino una herramienta de ventas altamente efectiva.
+                                Nuestras solicitudes de servicio han incrementado de forma sostenida gracias a su
+                                arquitectura y posicionamiento.</p>
+                            <div class="testimonial-footer">
+                                <div class="author-info">
+                                    <h4>Sergio Calderas</h4>
+                                    <span>Fundador, Calentadores Calderas</span>
+                                </div>
+                                <div class="company-logo">
+                                    <!-- Inserta aquí el logo del cliente -->
+                                    <img src="assets/logo-calderas.png" alt="Calentadores Calderas"
+                                        onerror="this.style.display='none'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 2 -->
+                    <div class="macos-window glass-panel reveal delay-2">
+                        <div class="macos-header">
+                            <div class="macos-buttons">
+                                <span class="btn-red"></span>
+                                <span class="btn-yellow"></span>
+                                <span class="btn-green"></span>
+                            </div>
+                            <div class="macos-title">alitasdival.vercel.app</div>
+                        </div>
+                        <div class="macos-body">
+                            <p class="testimonial-text">El desarrollo de nuestro ecosistema digital y la optimización
+                                de nuestra presencia online superó todas nuestras expectativas. La experiencia visual de
+                                nuestros clientes al interactuar con nuestra marca mejoró drásticamente. Trabajar con
+                                DETECH nos dio la seguridad técnica que necesitábamos para escalar.</p>
+                            <div class="testimonial-footer">
+                                <div class="author-info">
+                                    <h4>Gerencia General</h4>
+                                    <span>Manager Operativo, Alitas Dival</span>
+                                </div>
+                                <div class="company-logo">
+                                    <!-- Inserta aquí el logo del cliente -->
+                                    <img src="assets/logo-alitasdival.png" alt="Alitas Dival"
+                                        onerror="this.style.display='none'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ (Acordeón) -->
+        <section id="faq" class="section-padding bg-subtle">
+            <div class="container reveal">
+                <h2 class="section-title">PREGUNTAS <span class="text-gradient">FRECUENTES</span></h2>
+
+                <div class="faq-container">
+                    <div class="faq-item glass-panel">
+                        <button class="faq-question">
+                            <span>¿Cuánto tiempo tarda en estar lista mi página web?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Depende de la complejidad, pero una página corporativa estándar suele estar lista entre 2
+                                y 4 semanas, siempre con comunicación constante sobre los avances.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-panel">
+                        <button class="faq-question">
+                            <span>No tengo conocimientos técnicos, ¿ustedes me ayudan?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>¡Por supuesto! Nosotros nos encargamos de toda la configuración técnica del código y el
+                                servidor para que tú solo te enfoques en tu negocio.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-panel">
+                        <button class="faq-question">
+                            <span>¿Cuáles son las formas y tiempos de pago?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Trabajamos con un esquema de anticipo del 50% para arrancar el proyecto y el 50% restante
+                                al finalizar y entregar tu plataforma funcionando.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-panel">
+                        <button class="faq-question">
+                            <span>¿Mi página web se verá bien en celulares?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí, absolutamente. Todos nuestros diseños son "responsivos" (Mobile-First), lo que
+                                significa que se adaptan perfectamente para verse y funcionar de manera increíble en
+                                cualquier dispositivo.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-panel">
+                        <button class="faq-question">
+                            <span>¿Apareceré en Google automáticamente?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Entregamos tu sitio con la configuración interna adecuada (SEO on-page) para que Google
+                                pueda indexarlo. Posicionarse en los primeros lugares requiere tiempo y estrategias de
+                                marketing constantes que también podemos ofrecerte.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-panel">
+                        <button class="faq-question">
+                            <span>¿Quién es el dueño de la página y el dominio?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>¡Tú eres el único dueño! Una vez liquidado el pago total, te entregamos todos los
+                                accesos. La página, el diseño y el alojamiento son de tu total propiedad intelectual.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Sección Contacto -->
         <section id="contacto" class="section-padding">
             <div class="container split-layout reveal">
                 <div class="contact-text">
-                    <h2 class="section-title left-align">EMPECEMOS CON TU <span class="text-gradient">PROYECTO</span>
-                    </h2>
-                    <p class="lead-text">Cotiza tu proyecto y lleva tu presencia digital al siguiente nivel tecnológico.
-                    </p>
+                    <h2 class="section-title left-align">EMPECEMOS TU <span class="text-gradient">PROYECTO</span></h2>
+                    <p class="lead-text">Cotiza tu proyecto hoy y lleva tu presencia digital al siguiente nivel
+                        tecnológico. Transformamos ideas en código.</p>
 
-                    <!-- Redes Sociales Convertidas a Iconos Tech -->
                     <div class="social-links">
-                        <a href="https://wa.me/5574211364" target="_blank" aria-label="WhatsApp">
+                        <a href="https://wa.me/5574211364" target="_blank" rel="noopener" aria-label="WhatsApp">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path
@@ -374,7 +527,8 @@
                                 </path>
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/detech_dev/?hl=en" target="_blank" aria-label="Instagram">
+                        <a href="https://www.instagram.com/detech_dev/?hl=en" target="_blank" rel="noopener"
+                            aria-label="Instagram">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -382,14 +536,15 @@
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
-                        <a href="https://www.facebook.com/profile.php?id=61590806211777" target="_blank"
+                        <a href="https://www.facebook.com/profile.php?id=61590806211777" target="_blank" rel="noopener"
                             aria-label="Facebook">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                             </svg>
                         </a>
-                        <a href="mailto:contactosdetech@gmail.com" target="_blank" aria-label="Correo Electrónico">
+                        <a href="mailto:contactosdetech@gmail.com" target="_blank" rel="noopener"
+                            aria-label="Correo Electrónico">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
@@ -398,92 +553,21 @@
                             </svg>
                         </a>
                     </div>
-
                 </div>
                 <div class="form-wrapper glass-panel whatsapp-action-panel">
-                    <a href="https://wa.me/5574211364" target="_blank" class="glowing-btn text-center"
-                        style="display: block; text-decoration: none;">
+                    <a href="https://wa.me/5574211364" target="_blank" rel="noopener" class="glowing-btn text-center">
                         <span>COTIZACIÓN GRATUITA</span>
                     </a>
                 </div>
             </div>
         </section>
-
-        <!-- Sección FAQ -->
-        <section id="faq" class="section-padding">
-            <div class="container reveal">
-                <h2 class="section-title">PREGUNTAS <span class="text-gradient">FRECUENTES</span></h2>
-
-                <div
-                    style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; margin-top: 40px;">
-                    <div class="glass-panel" style="padding: 25px; text-align: left;">
-                        <h3 style="color: var(--brand-cyan); margin-bottom: 10px; font-size: 1.2rem;">¿Cuánto tiempo
-                            tarda en estar lista mi página web?</h3>
-                        <p style="color: var(--text-muted); font-size: 1.05rem;">Depende de la complejidad, pero una
-                            página corporativa estándar suele estar lista entre 2 y 4 semanas, siempre con comunicación
-                            constante sobre los avances.</p>
-                    </div>
-
-                    <div class="glass-panel" style="padding: 25px; text-align: left;">
-                        <h3 style="color: var(--brand-cyan); margin-bottom: 10px; font-size: 1.2rem;">No tengo
-                            conocimientos técnicos, ¿ustedes me ayudan?</h3>
-                        <p style="color: var(--text-muted); font-size: 1.05rem;">¡Por supuesto! Nosotros nos encargamos
-                            de toda la configuración técnica del código y el servidor para que tú solo te enfoques en tu
-                            negocio.</p>
-                    </div>
-
-                    <div class="glass-panel" style="padding: 25px; text-align: left;">
-                        <h3 style="color: var(--brand-cyan); margin-bottom: 10px; font-size: 1.2rem;">¿Cuáles son las
-                            formas y tiempos de pago?</h3>
-                        <p style="color: var(--text-muted); font-size: 1.05rem;">Trabajamos con un esquema de anticipo
-                            del 50% para arrancar el proyecto y el 50% restante al finalizar y entregar tu plataforma.
-                        </p>
-                    </div>
-                    <div class="glass-panel" style="padding: 25px; text-align: left;">
-                        <h3 style="color: var(--brand-cyan); margin-bottom: 10px; font-size: 1.2rem;">¿Mi página web se
-                            verá bien en celulares?</h3>
-                        <p style="color: var(--text-muted); font-size: 1.05rem;">Sí, absolutamente. Todos nuestros
-                            diseños son "responsivos", lo que significa que se adaptan perfectamente para verse y
-                            funcionar de manera increíble en cualquier dispositivo, ya sea celular, tablet o
-                            computadora.</p>
-                    </div>
-
-                    <div class="glass-panel" style="padding: 25px; text-align: left;">
-                        <h3 style="color: var(--brand-cyan); margin-bottom: 10px; font-size: 1.2rem;">¿Apareceré en
-                            Google automáticamente?</h3>
-                        <p style="color: var(--text-muted); font-size: 1.05rem;">Entregamos tu sitio con la
-                            configuración interna adecuada (SEO básico) para que Google pueda encontrarlo y leerlo. Sin
-                            embargo, posicionarse en los primeros lugares requiere tiempo y estrategias de marketing
-                            constantes, las cuales también podemos trabajar juntos.</p>
-                    </div>
-
-                    <div class="glass-panel" style="padding: 25px; text-align: left;">
-                        <h3 style="color: var(--brand-cyan); margin-bottom: 10px; font-size: 1.2rem;">¿Qué pasa si no me
-                            gusta el diseño inicial?</h3>
-                        <p style="color: var(--text-muted); font-size: 1.05rem;">Trabajamos de la mano contigo paso a
-                            paso. Antes de escribir una sola línea de código, te presentamos propuestas visuales. Tu
-                            proyecto incluye rondas de revisión para asegurar que el resultado final te encante y
-                            represente la esencia de tu marca.</p>
-                    </div>
-
-                    <div class="glass-panel" style="padding: 25px; text-align: left;">
-                        <h3 style="color: var(--brand-cyan); margin-bottom: 10px; font-size: 1.2rem;">¿Quién es el dueño
-                            de la página y el dominio?</h3>
-                        <p style="color: var(--text-muted); font-size: 1.05rem;">¡Tú eres el único dueño! Una vez
-                            liquidado el pago total del proyecto, te entregamos todos los accesos, contraseñas y
-                            credenciales. La página, el diseño y el alojamiento son de tu total propiedad.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container footer-container reveal">
             <div class="footer-socials">
-                <a href="https://wa.me/5574211364" target="_blank" class="social-item">
+                <a href="https://wa.me/5574211364" target="_blank" rel="noopener" class="social-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path
@@ -492,23 +576,17 @@
                     </svg>
                     <span>55 7421 1364</span>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61590806211777" target="_blank" class="social-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                    </svg>
-                    <span>DETECH</span>
-                </a>
-                <a href="https://www.instagram.com/detech_dev/?hl=en" target="_blank" class="social-item">
+                <a href="https://www.instagram.com/detech_dev/?hl=en" target="_blank" rel="noopener"
+                    class="social-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                     </svg>
-                    <span>Detech_dev</span>
+                    <span>@detech_dev</span>
                 </a>
-                <a href="mailto:contactosdetech@gmail.com" target="_blank" class="social-item">
+                <a href="mailto:contactosdetech@gmail.com" target="_blank" rel="noopener" class="social-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -519,24 +597,20 @@
             </div>
             <div class="footer-copy">
                 <p>&copy; 2026 DETECH. Todos los derechos reservados.</p>
-                <div style="margin-top: 15px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                    <a href="privacidad.html"
-                        style="color: var(--brand-cyan); text-decoration: none; font-size: 0.9rem; font-family: var(--font-ui); transition: opacity 0.3s;"
-                        onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">Aviso de
-                        Privacidad</a>
-                    <span style="color: var(--text-muted); font-size: 0.9rem;">|</span>
-                    <a href="terminos.html"
-                        style="color: var(--brand-cyan); text-decoration: none; font-size: 0.9rem; font-family: var(--font-ui); transition: opacity 0.3s;"
-                        onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">Términos y
-                        Condiciones</a>
+                <div class="footer-links">
+                    <a href="privacidad.html">Aviso de Privacidad</a>
+                    <span class="separator">|</span>
+                    <a href="terminos.html">Términos y Condiciones</a>
                 </div>
             </div>
+        </div>
     </footer>
 
-    <!-- Contenedor Botón Flotante WhatsApp Animado -->
+    <!-- Botón Flotante WhatsApp -->
     <div class="wa-container">
         <div class="wa-message">¡Hola! ¿En qué te ayudamos?</div>
-        <a href="https://wa.me/5574211364" class="floating-wa" target="_blank" aria-label="Contactar por WhatsApp">
+        <a href="https://wa.me/5574211364" class="floating-wa" target="_blank" rel="noopener"
+            aria-label="Contactar por WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
