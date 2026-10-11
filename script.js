@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const closeWaBtn = document.getElementById('close-wa');
+    const waMessage = document.getElementById('wa-message');
+
+    if (closeWaBtn && waMessage) {
+        closeWaBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            waMessage.style.display = 'none'; // Oculta el mensaje al hacer clic en la X
+        });
+    }
+
     /* --- MENÚ MÓVIL --- */
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');

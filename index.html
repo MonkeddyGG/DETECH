@@ -608,7 +608,10 @@
 
     <!-- Botón Flotante WhatsApp -->
     <div class="wa-container">
-        <div class="wa-message">¡Hola! ¿En qué te ayudamos?</div>
+        <div class="wa-message" id="wa-message">
+            <button id="close-wa" class="close-wa-btn" aria-label="Cerrar mensaje">&times;</button>
+            <span>¡Hola! ¿En qué te ayudamos?</span>
+        </div>
         <a href="https://wa.me/5574211364" class="floating-wa" target="_blank" rel="noopener"
             aria-label="Contactar por WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor">

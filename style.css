@@ -414,8 +414,9 @@ header.scrolled .nav-container {
 }
 
 .terminal-prompt {
+    transform: translateY(-50px);
     font-family: var(--font-code);
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(0.91rem, 2.5vw, 1.2rem);
     color: var(--text-primary);
     padding: 18px 25px;
     display: inline-block;
@@ -1304,6 +1305,7 @@ header.scrolled .nav-container {
    CONTENEDOR WHATSAPP ANIMADO
    ========================================= */
 .wa-container {
+    pointer-events: auto;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -1338,6 +1340,30 @@ header.scrolled .nav-container {
     border-width: 6px 0 6px 6px;
     border-style: solid;
     border-color: transparent transparent transparent rgba(0, 229, 255, 0.4);
+}
+
+/* Estilo del botón de la "X" para que se vea estético y sea fácil de dar clic */
+.close-wa-btn {
+    position: relative;
+    pointer-events: auto;
+    z-index: 10;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    /* Tamaño de la X legible */
+    line-height: 1;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    padding: 5px;
+    /* Área interna para hacer clic cómodamente */
+}
+
+.close-wa-btn:hover {
+    opacity: 1;
+    color: var(--brand-cyan);
+    /* Se ilumina con el cian de tu marca al pasar el mouse */
 }
 
 @keyframes floatMessage {
@@ -1462,17 +1488,17 @@ header.scrolled .nav-container {
     .hero-content h1 {
         font-size: clamp(3.8rem, 12vw, 5rem);
         line-height: 1.1;
-        margin-bottom: 25px;
+        margin-bottom: 80px;
     }
 
     .split-layout {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 0px;
     }
 
     .hero-content {
         margin: 0 auto;
-        text-align: center;
+        text-align: left;
     }
 
     .section-title.left-align {
