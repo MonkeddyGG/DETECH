@@ -1,12 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    /* --- CHATBOT WHATSAPP CON DETECH (APARICIÓN SUAVE) --- */
     const closeWaBtn = document.getElementById('close-wa');
     const waMessage = document.getElementById('wa-message');
+    const waToggleBtn = document.getElementById('wa-toggle-btn');
+    const waBadge = document.getElementById('wa-badge');
+    let waUserClosed = false;
+
+    if (waMessage) {
+        // Inicia oculto para no invadir al cargar la página
+        waMessage.classList.add('hidden');
+        if (waBadge) waBadge.classList.add('hidden');
+
+        // Aparece suavemente después de 2.5 segundos
+        setTimeout(() => {
+            if (!waUserClosed) {
+                waMessage.classList.remove('hidden');
+                if (waBadge) waBadge.classList.remove('hidden');
+            }
+        }, 2500);
+    }
 
     if (closeWaBtn && waMessage) {
         closeWaBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            waMessage.style.display = 'none'; // Oculta el mensaje al hacer clic en la X
+            e.stopPropagation();
+            waUserClosed = true;
+            waMessage.classList.add('hidden');
+            if (waBadge) waBadge.classList.add('hidden');
+        });
+    }
+
+    if (waToggleBtn && waMessage) {
+        waToggleBtn.addEventListener('click', () => {
+            const isHidden = waMessage.classList.contains('hidden');
+            if (isHidden) {
+                waMessage.classList.remove('hidden');
+            } else {
+                waUserClosed = true;
+                waMessage.classList.add('hidden');
+            }
+            if (waBadge) {
+                waBadge.classList.add('hidden');
+            }
         });
     }
 
@@ -15,18 +51,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenuBtn.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Cerrar el menú al hacer clic en un enlace (ideal para móviles)
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenuBtn.classList.remove('active');
-            navMenu.classList.remove('active');
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
-    });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
 
     /* --- NAVBAR SCROLL (Efecto Píldora Flotante) --- */
     const navbar = document.getElementById('navbar');
@@ -41,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let charIndex = 0;
 
     function typeWriter() {
-        if (charIndex < textToType.length) {
+        if (typingContainer && charIndex < textToType.length) {
             typingContainer.textContent += textToType.charAt(charIndex);
             charIndex++;
             let speed = Math.floor(Math.random() * 30) + 20;
@@ -49,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(typeWriter, speed);
         }
     }
-    setTimeout(typeWriter, 600);
+    setTimeout(typeWriter, 500);
 
     /* --- ANIMACIONES REVEAL AL HACER SCROLL --- */
     const reveals = document.querySelectorAll('.reveal');
@@ -60,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 obs.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
 
     reveals.forEach(el => observer.observe(el));
 
@@ -80,13 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
         questionBtn.addEventListener('click', () => {
             const isOpen = item.classList.contains('active');
 
-            // Cerrar todos los demás primero
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('active');
                 otherItem.querySelector('.faq-answer').style.maxHeight = null;
             });
 
-            // Si no estaba abierto, lo abrimos
             if (!isOpen) {
                 item.classList.add('active');
                 answer.style.maxHeight = answer.scrollHeight + "px";
@@ -94,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* --- EFECTO TILT 3D PARA EL LOGO DEL MOTOR DETECH --- */
+    /* --- EFECTO TILT 3D PARA EL LOGO DETECH --- */
     const interactiveLogo = document.getElementById('interactive-logo');
     const isTouchDevice = () => ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 

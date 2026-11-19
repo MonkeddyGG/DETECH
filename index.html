@@ -20,7 +20,7 @@
         content="Agencia de Diseño y Desarrollo Web. Sitios Optimizados, Marketing Digital.">
     <meta property="og:image" content="https://detech-dev.vercel.app/assets/preview-detech.png">
 
-    <!-- Twitter Cards  -->
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://detech-dev.vercel.app/">
     <meta name="twitter:title" content="DETECH — Arquitecturas Digitales de Alto Rendimiento">
@@ -30,11 +30,11 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Fuentes Modernas -->
+    <!-- Tipografía Estilo Editorial + Técnica (Plus Jakarta Sans, Inter & JetBrains Mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&family=Urbanist:wght@300;400;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
 
@@ -63,20 +63,21 @@
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-links">
                     <li><a href="#inicio" class="nav-link">INICIO</a></li>
-                    <li><a href="#perfil" class="nav-link">PERFIL</a></li>
                     <li><a href="#servicios" class="nav-link">SERVICIOS</a></li>
                     <li><a href="#proyectos" class="nav-link">PROYECTOS</a></li>
+                    <li><a href="#proceso" class="nav-link">METODOLOGÍA</a></li>
                     <li><a href="#testimonios" class="nav-link">TESTIMONIOS</a></li>
                 </ul>
 
-                <!-- Nuevo Footer del menú (Visible solo en celular) -->
+                <!-- Footer del menú móvil -->
                 <div class="mobile-menu-footer mobile-only">
                     <img src="assets/LOGO-DETECH.png" alt="DETECH Logo" class="mobile-menu-logo">
 
-                    <a href="https://wa.me/5574211364" target="_blank" rel="noopener" class="btn-contact">COTIZAR</a>
+                    <a href="https://wa.me/525574211364?text=Hola%20DETECH,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20gratuita."
+                        target="_blank" rel="noopener" class="btn-contact">COTIZAR</a>
 
                     <div class="mobile-social-links">
-                        <a href="https://wa.me/5574211364" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <a href="https://wa.me/525574211364" target="_blank" rel="noopener" aria-label="WhatsApp">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path
@@ -93,6 +94,13 @@
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
+                        <a href="https://www.facebook.com/profile.php?id=61590806211777" target="_blank" rel="noopener"
+                            aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
                         <a href="mailto:contactosdetech@gmail.com" target="_blank" rel="noopener" aria-label="Correo">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
@@ -104,216 +112,246 @@
                     </div>
                 </div>
             </nav>
-            <a href="https://wa.me/5574211364" target="_blank" rel="noopener"
-                class="btn-contact desktop-only">CONTACTAR</a>
+            <a href="https://wa.me/525574211364?text=Hola%20DETECH,%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios."
+                target="_blank" rel="noopener" class="btn-contact desktop-only">CONTACTAR</a>
         </div>
     </header>
 
     <main>
-        <!-- Sección Hero -->
+        <!-- =========================================
+             SECCIÓN HERO (FUSIÓN EDITORIAL + LOGO 3D)
+             ========================================= -->
         <section id="inicio" class="hero-section">
-            <div class="hero-content reveal">
-                <div class="badge">
-                    <span class="pulse-dot"></span>
-                    Agencia Digital
-                </div>
-                <h1>DESARROLLO<br>DISEÑO Y<br>MARKETING <span class="text-neon">WEB</span></h1>
-                <div class="terminal-prompt glass-panel">
-                    <span class="prompt-arrow">❯</span>
-                    <span id="typewriter-text"></span><span class="cursor-blink">_</span>
-                </div>
-            </div>
-        </section>
+            <div class="container hero-grid">
+                <!-- Columna Izquierda: Copy & CTAs -->
+                <div class="hero-content reveal">
+                    <div class="badge">
+                        <span class="pulse-dot"></span>
+                        Agencia Digital
+                    </div>
 
-        <!-- Sección Perfil -->
-        <section id="perfil" class="section-padding">
-            <div class="container split-layout relative-z">
-                <div class="text-content reveal">
-                    <h2 class="section-title left-align">El motor detrás de <span class="text-gradient">DETECH</span>
-                    </h2>
-                    <p class="lead-text">
-                        Detrás de cada línea de código hay un equipo humano comprometido con tu éxito.
-                        No solo creamos páginas visualmente impactantes, diseñamos herramientas digitales rápidas,
-                        seguras y pensadas para que tus clientes confíen en tu negocio desde el primer clic.
+                    <h1>DESARROLLO,<br>DISEÑO Y<br>MARKETING <span class="text-neon">WEB</span></h1>
+
+                    <div class="terminal-prompt glass-panel">
+                        <span class="prompt-arrow">❯</span>
+                        <span id="typewriter-text"></span><span class="cursor-blink">_</span>
+                    </div>
+
+                    <p class="hero-subtext">
+                        Webs y Software a Medida para cualquier negocio y empresa.
                     </p>
 
-                    <div class="stats-grid">
-                        <div class="stat-box glass-panel">
-                            <div class="stat-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                            </div>
-                            <span class="stat-number">Conexión</span>
-                            <span class="stat-label">Experiencia fluida y centrada en el usuario</span>
-                        </div>
-                        <div class="stat-box glass-panel">
-                            <div class="stat-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                </svg>
-                            </div>
-                            <span class="stat-number">Respaldo</span>
-                            <span class="stat-label">Infraestructura rápida, segura y escalable</span>
-                        </div>
+                    <div class="hero-cta-group">
+                        <a href="https://wa.me/525574211364?text=Hola%20DETECH,%20me%20gustar%C3%ADa%20solicitar%20una%20Cotizaci%C3%B3n%20Gratuita."
+                            target="_blank" rel="noopener" class="btn-primary-neon">
+                            Cotización Gratuita
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#contacto" class="btn-secondary-glass">
+                            Empezar Proyecto
+                        </a>
                     </div>
                 </div>
 
-                <!-- Diseño Interactivo del Logo en 3D -->
-                <div class="logo-interactive-wrapper reveal delay-1">
-                    <div class="hologram-glow"></div>
-                    <div class="orbit-container">
-                        <div class="orbit-ring ring-1"></div>
-                        <div class="orbit-ring ring-2"></div>
-                        <div class="orbit-ring ring-3"></div>
-                    </div>
-                    <div class="interactive-logo" id="interactive-logo">
-                        <img src="assets/LogoDETECHmini.png" alt="Logo Motor DETECH" class="motor-logo">
-                        <div class="scan-line"></div>
-                    </div>
-                    <div class="tech-labels desktop-only">
-                        <span class="tech-label" style="top: 10%; left: 0;">INNOVACIÓN & CALIDAD</span>
-                        <span class="tech-label" style="bottom: 15%; right: 0;">CRECIMIENTO // CONFIANZA</span>
+                <!-- Columna Derecha: Círculo Interactivo con Logo DETECH -->
+                <div class="hero-visual reveal delay-1">
+                    <div class="logo-interactive-wrapper">
+                        <div class="hologram-glow"></div>
+                        <div class="orbit-container">
+                            <div class="orbit-ring ring-1"></div>
+                            <div class="orbit-ring ring-2"></div>
+                            <div class="orbit-ring ring-3"></div>
+                        </div>
+                        <div class="interactive-logo" id="interactive-logo">
+                            <img src="assets/LogoDETECHmini.png" alt="Logo DETECH" class="motor-logo">
+                            <div class="scan-line"></div>
+                        </div>
+                        <div class="tech-labels desktop-only">
+                            <span class="tech-label" style="top: 8%; left: 0;">INNOVACIÓN &amp; CALIDAD</span>
+                            <span class="tech-label" style="bottom: 12%; right: 0;">CRECIMIENTO // CONFIANZA</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Nuestro Proceso -->
-        <section id="proceso" class="section-padding bg-subtle">
-            <div class="container reveal">
-                <h2 class="section-title">METODOLOGÍA <span class="text-gradient">ESTRATÉGICA</span></h2>
-                <p class="lead-text text-center mx-auto" style="max-width: 800px; margin-bottom: 50px;">
-                    Transformamos la visión de su empresa en soluciones digitales de alto impacto mediante un enfoque
-                    estructurado y orientado a resultados.
-                </p>
-
-                <div class="process-grid">
-                    <div class="process-step glass-panel reveal">
-                        <div class="step-number">01</div>
-                        <div class="step-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </div>
-                        <h3>Consultoría y Diagnóstico</h3>
-                        <p>Inmersión profunda en su modelo de negocio. Evaluamos objetivos, KPIs y mercado meta para
-                            estructurar una solución a medida.</p>
-                    </div>
-
-                    <div class="process-step glass-panel reveal delay-1">
-                        <div class="step-number">02</div>
-                        <div class="step-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                <polyline points="2 17 12 22 22 17"></polyline>
-                                <polyline points="2 12 12 17 22 12"></polyline>
-                            </svg>
-                        </div>
-                        <h3>Diseño UI/UX</h3>
-                        <p>Definimos la identidad corporativa y la arquitectura visual. Interfaces intuitivas enfocadas
-                            en retención y conversión.</p>
-                    </div>
-
-                    <div class="process-step glass-panel reveal delay-2">
-                        <div class="step-number">03</div>
-                        <div class="step-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M8 6L2 12l6 6"></path>
-                                <path d="M16 18l6-6-6-6"></path>
-                            </svg>
-                        </div>
-                        <h3>Desarrollo Técnico</h3>
-                        <p>Metodologías ágiles para construir infraestructuras seguras. Maximizamos el rendimiento y la
-                            optimización SEO del código.</p>
-                    </div>
-
-                    <div class="process-step glass-panel reveal delay-3">
-                        <div class="step-number">04</div>
-                        <div class="step-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2.53a5.18 5.18 0 0 1 7.47 0 5.18 5.18 0 0 1 0 7.47L12 17.5l-5-5 7.5-7.47z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3>Soporte Continuo</h3>
-                        <p>Despliegue bajo estrictos protocolos de calidad. Mantenimiento evolutivo para asegurar el
-                            crecimiento sostenido digital.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección Servicios -->
+        <!-- =========================================
+             SECCIÓN SERVICIOS (BENTO BOX ESTILO EDITORIAL)
+             ========================================= -->
         <section id="servicios" class="section-padding">
             <div class="container reveal">
-                <h2 class="section-title">ECOSISTEMA DE <span class="text-gradient">SERVICIOS</span></h2>
+                <div class="section-header-editorial">
+                    <span class="section-eyebrow">// SOLUCIONES DIGITALES</span>
+                    <h2 class="section-title">NUESTROS <span class="text-gradient">SERVICIOS</span></h2>
+                    <p class="lead-text text-center mx-auto" style="max-width: 680px;">
+                        Arquitectura digital integral diseñada para posicionar tu marca, automatizar procesos y
+                        convertir visitantes en clientes.
+                    </p>
+                </div>
 
-                <div class="services-list">
-                    <article class="service-row glass-panel reveal">
-                        <div class="service-img" style="background-image: url('assets/mockup1.png');"></div>
-                        <div class="service-content">
-                            <div class="icon-wrapper">
+                <div class="bento-grid">
+                    <!-- Bento 1: Páginas Web (Tarjeta Ancha) -->
+                    <article class="bento-card bento-span-7 glass-panel reveal">
+                        <div class="bento-top">
+                            <div class="bento-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <span class="bento-tag">01 // WEB &amp; SEO</span>
+                        </div>
+                        <div class="bento-body">
+                            <h3>Páginas Web</h3>
+                            <p>Sitios corporativos y landing pages ultrarrápidas, responsivas y optimizadas para
+                                buscadores. Diseñadas desde cero para proyectar autoridad y maximizar tus conversiones.
+                            </p>
+                        </div>
+                        <div class="bento-footer">
+                            <div class="bento-pills">
+                                <span>Diseño UI/UX</span>
+                                <span>Mobile-First</span>
+                                <span>SEO Técnico</span>
+                            </div>
+                            <a href="https://wa.me/525574211364?text=Hola%20DETECH,%20me%20interesa%20cotizar%20una%20P%C3%A1gina%20Web."
+                                target="_blank" rel="noopener" class="bento-link" aria-label="Cotizar Páginas Web">
+                                Cotizar <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Bento 2: Tienda Online (Tarjeta Mediana) -->
+                    <article class="bento-card bento-span-5 glass-panel reveal delay-1">
+                        <div class="bento-top">
+                            <div class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                            </div>
+                            <span class="bento-tag">02 // E-COMMERCE</span>
+                        </div>
+                        <div class="bento-body">
+                            <h3>Tienda Online</h3>
+                            <p>Plataformas de comercio electrónico listas para vender 24/7 con pasarelas de pago
+                                integradas, control de inventario y experiencia de compra sin fricciones.</p>
+                        </div>
+                        <div class="bento-footer">
+                            <div class="bento-pills">
+                                <span>Pagos Seguros</span>
+                                <span>Catálogo Autogestionable</span>
+                            </div>
+                            <a href="https://wa.me/525574211364?text=Hola%20DETECH,%20me%20interesa%20cotizar%20una%20Tienda%20Online."
+                                target="_blank" rel="noopener" class="bento-link" aria-label="Cotizar Tienda Online">
+                                Cotizar <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Bento 3: Software a Medida -->
+                    <article class="bento-card bento-span-4 glass-panel reveal delay-1">
+                        <div class="bento-top">
+                            <div class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="16 18 22 12 16 6"></polyline>
                                     <polyline points="8 6 2 12 8 18"></polyline>
                                 </svg>
                             </div>
-                            <h3>Desarrollo Web</h3>
-                            <p>Sistemas a medida, bases de datos optimizadas y arquitecturas escalables preparadas para
-                                el futuro. Construimos la columna vertebral digital de tu negocio.</p>
+                            <span class="bento-tag">03 // SISTEMAS</span>
+                        </div>
+                        <div class="bento-body">
+                            <h3>Software a Medida</h3>
+                            <p>Sistemas internos, paneles administrativos, puntos de venta y bases de datos
+                                personalizadas que automatizan la operación de tu empresa.</p>
+                        </div>
+                        <div class="bento-footer">
+                            <div class="bento-pills">
+                                <span>Dashboards</span>
+                                <span>APIs &amp; Cloud</span>
+                            </div>
+                            <a href="https://wa.me/525574211364?text=Hola%20DETECH,%20me%20interesa%20cotizar%20Software%20a%20Medida."
+                                target="_blank" rel="noopener" class="bento-link"
+                                aria-label="Cotizar Software a Medida">
+                                Cotizar <span>↗</span>
+                            </a>
                         </div>
                     </article>
 
-                    <article class="service-row reverse glass-panel reveal delay-1">
-                        <div class="service-img" style="background-image: url('assets/mockup6.jpg');"></div>
-                        <div class="service-content">
-                            <div class="icon-wrapper">
+                    <!-- Bento 4: Manejo de Redes Sociales -->
+                    <article class="bento-card bento-span-4 glass-panel reveal delay-2">
+                        <div class="bento-top">
+                            <div class="bento-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                                    <path d="M2 2l7.586 7.586"></path>
-                                    <circle cx="11" cy="11" r="2"></circle>
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                                 </svg>
                             </div>
-                            <h3>Diseño Gráfico y Branding</h3>
-                            <p>Identidad visual, branding y logotipos creados con precisión para destacar tu marca
-                                frente a la competencia. Diseñamos con propósito y estética moderna.</p>
+                            <span class="bento-tag">04 // SOCIAL MEDIA</span>
+                        </div>
+                        <div class="bento-body">
+                            <h3>Manejo de Redes Sociales</h3>
+                            <p>Gestión estratégica, calendario editorial, análisis de métricas y pauta publicitaria
+                                enfocada en hacer crecer tu comunidad y atraer clientes reales.</p>
+                        </div>
+                        <div class="bento-footer">
+                            <div class="bento-pills">
+                                <span>Estrategia</span>
+                                <span>Meta &amp; TikTok</span>
+                            </div>
+                            <a href="https://wa.me/525574211364?text=Hola%20DETECH,%20me%20interesa%20el%20servicio%20de%20Manejo%20de%20Redes%20Sociales."
+                                target="_blank" rel="noopener" class="bento-link"
+                                aria-label="Cotizar Manejo de Redes Sociales">
+                                Cotizar <span>↗</span>
+                            </a>
                         </div>
                     </article>
 
-                    <article class="service-row glass-panel reveal delay-1">
-                        <div class="service-img" style="background-image: url('assets/mockup2.png');"></div>
-                        <div class="service-content">
-                            <div class="icon-wrapper">
+                    <!-- Bento 5: Creación de Contenido -->
+                    <article class="bento-card bento-span-4 glass-panel reveal delay-3">
+                        <div class="bento-top">
+                            <div class="bento-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
-                                    <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
                                 </svg>
                             </div>
-                            <h3>Marketing Digital & SEO</h3>
-                            <p>Estrategias de posicionamiento SEO, gestión de campañas y contenido para conectar con tu
-                                audiencia ideal. Hacemos que tu mensaje llegue a las personas correctas.</p>
+                            <span class="bento-tag">05 // CONTENIDO</span>
+                        </div>
+                        <div class="bento-body">
+                            <h3>Creación de Contenido</h3>
+                            <p>Diseño gráfico publicitario, edición de reels dinámicos y piezas visuales de alto impacto
+                                alineadas con la identidad visual de tu negocio.</p>
+                        </div>
+                        <div class="bento-footer">
+                            <div class="bento-pills">
+                                <span>Flyers &amp; Branding</span>
+                                <span>Reels</span>
+                            </div>
+                            <a href="https://wa.me/525574211364?text=Hola%20DETECH,%20me%20interesa%20el%20servicio%20de%20Creaci%C3%B3n%20de%20Contenido."
+                                target="_blank" rel="noopener" class="bento-link"
+                                aria-label="Cotizar Creación de Contenido">
+                                Cotizar <span>↗</span>
+                            </a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Proyectos -->
+        <!-- =========================================
+             SECCIÓN PROYECTOS (INTACTA)
+             ========================================= -->
         <section id="proyectos" class="section-padding bg-subtle">
             <h2 class="section-title reveal">PROYECTOS <span class="text-gradient">DESTACADOS</span></h2>
             <div class="marquee-container reveal delay-1">
@@ -380,8 +418,126 @@
             </div>
         </section>
 
-        <!-- Sección Testimonios (MACOS WINDOW) -->
-        <section id="testimonios" class="section-padding">
+        <!-- =========================================
+             METODOLOGÍA ESTRATÉGICA (MISMOS TEXTOS, NUEVO DISEÑO EDITORIAL)
+             ========================================= -->
+        <section id="proceso" class="section-padding">
+            <div class="container reveal">
+                <div class="methodology-layout">
+                    <!-- Cabecera Sticky / Izquierda -->
+                    <div class="methodology-header">
+                        <span class="section-eyebrow">// FLUJO DE TRABAJO</span>
+                        <h2 class="section-title left-align">METODOLOGÍA <span class="text-gradient">ESTRATÉGICA</span>
+                        </h2>
+                        <p class="lead-text">
+                            Transformamos la visión de su empresa en soluciones digitales de alto impacto mediante un
+                            enfoque estructurado y orientado a resultados.
+                        </p>
+                        <div class="methodology-badge-box glass-panel">
+                            <span class="pulse-dot"></span>
+                            <span>Entregas iterativas y comunicación directa en cada etapa.</span>
+                        </div>
+                    </div>
+
+                    <!-- Lista Editorial Numerada / Derecha -->
+                    <div class="methodology-timeline">
+                        <div class="timeline-card glass-panel reveal">
+                            <div class="timeline-marker">
+                                <span class="timeline-num">01</span>
+                                <div class="timeline-line"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-title-row">
+                                    <h3>Consultoría y Diagnóstico</h3>
+                                    <div class="timeline-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <circle cx="11" cy="11" r="8"></circle>
+                                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>Inmersión profunda en su modelo de negocio. Evaluamos objetivos, KPIs y mercado meta
+                                    para estructurar una solución a medida.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-card glass-panel reveal delay-1">
+                            <div class="timeline-marker">
+                                <span class="timeline-num">02</span>
+                                <div class="timeline-line"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-title-row">
+                                    <h3>Diseño UI/UX</h3>
+                                    <div class="timeline-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                            <polyline points="2 17 12 22 22 17"></polyline>
+                                            <polyline points="2 12 12 17 22 12"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>Definimos la identidad corporativa y la arquitectura visual. Interfaces intuitivas
+                                    enfocadas en retención y conversión.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-card glass-panel reveal delay-2">
+                            <div class="timeline-marker">
+                                <span class="timeline-num">03</span>
+                                <div class="timeline-line"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-title-row">
+                                    <h3>Desarrollo Técnico</h3>
+                                    <div class="timeline-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M8 6L2 12l6 6"></path>
+                                            <path d="M16 18l6-6-6-6"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>Metodologías ágiles para construir infraestructuras seguras. Maximizamos el
+                                    rendimiento y la optimización SEO del código.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-card glass-panel reveal delay-3">
+                            <div class="timeline-marker">
+                                <span class="timeline-num">04</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-title-row">
+                                    <h3>Soporte Continuo</h3>
+                                    <div class="timeline-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M12 2.53a5.18 5.18 0 0 1 7.47 0 5.18 5.18 0 0 1 0 7.47L12 17.5l-5-5 7.5-7.47z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>Despliegue bajo estrictos protocolos de calidad. Mantenimiento evolutivo para
+                                    asegurar el crecimiento sostenido digital.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SECCIÓN TESTIMONIOS (INTACTA)
+             ========================================= -->
+        <section id="testimonios" class="section-padding bg-subtle">
             <div class="container reveal">
                 <h2 class="section-title">LO QUE DICEN <span class="text-gradient">NUESTROS CLIENTES</span></h2>
                 <p class="lead-text text-center mx-auto" style="max-width: 800px; margin-bottom: 50px;">
@@ -389,7 +545,6 @@
                 </p>
 
                 <div class="testimonial-grid">
-
                     <!-- Testimonio 1 -->
                     <div class="macos-window glass-panel reveal delay-1">
                         <div class="macos-header">
@@ -412,7 +567,6 @@
                                     <span>Fundador, Calentadores Calderas</span>
                                 </div>
                                 <div class="company-logo">
-                                    <!-- Inserta aquí el logo del cliente -->
                                     <img src="assets/logo-calderas.png" alt="Calentadores Calderas"
                                         onerror="this.style.display='none'">
                                 </div>
@@ -441,20 +595,20 @@
                                     <span>Manager Operativo, Alitas Dival</span>
                                 </div>
                                 <div class="company-logo">
-                                    <!-- Inserta aquí el logo del cliente -->
                                     <img src="assets/logo-alitasdival.png" alt="Alitas Dival"
                                         onerror="this.style.display='none'">
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- FAQ (Acordeón) -->
-        <section id="faq" class="section-padding bg-subtle">
+        <!-- =========================================
+             FAQ ACORDEÓN (INTACTA)
+             ========================================= -->
+        <section id="faq" class="section-padding">
             <div class="container reveal">
                 <h2 class="section-title">PREGUNTAS <span class="text-gradient">FRECUENTES</span></h2>
 
@@ -543,8 +697,10 @@
             </div>
         </section>
 
-        <!-- Sección Contacto -->
-        <section id="contacto" class="section-padding">
+        <!-- =========================================
+             SECCIÓN EMPEZAR PROYECTO / CONTACTO (INTACTA)
+             ========================================= -->
+        <section id="contacto" class="section-padding bg-subtle">
             <div class="container split-layout reveal">
                 <div class="contact-text">
                     <h2 class="section-title left-align">EMPECEMOS TU <span class="text-gradient">PROYECTO</span></h2>
@@ -552,7 +708,7 @@
                         tecnológico. Transformamos ideas en código.</p>
 
                     <div class="social-links">
-                        <a href="https://wa.me/5574211364" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <a href="https://wa.me/525574211364" target="_blank" rel="noopener" aria-label="WhatsApp">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path
@@ -588,7 +744,8 @@
                     </div>
                 </div>
                 <div class="form-wrapper glass-panel whatsapp-action-panel">
-                    <a href="https://wa.me/5574211364" target="_blank" rel="noopener" class="glowing-btn text-center">
+                    <a href="https://wa.me/525574211364?text=Hola%20DETECH,%20quiero%20solicitar%20una%20Cotizaci%C3%B3n%20Gratuita."
+                        target="_blank" rel="noopener" class="glowing-btn text-center">
                         <span>COTIZACIÓN GRATUITA</span>
                     </a>
                 </div>
@@ -596,38 +753,78 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- =========================================
+         FOOTER REDISEÑADO + FACEBOOK
+         ========================================= -->
     <footer class="site-footer">
-        <div class="container footer-container reveal">
-            <div class="footer-socials">
-                <a href="https://wa.me/5574211364" target="_blank" rel="noopener" class="social-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path
-                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                        </path>
-                    </svg>
-                    <span>55 7421 1364</span>
-                </a>
-                <a href="https://www.instagram.com/detech_dev/?hl=en" target="_blank" rel="noopener"
-                    class="social-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                    <span>@detech_dev</span>
-                </a>
-                <a href="mailto:contactosdetech@gmail.com" target="_blank" rel="noopener" class="social-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    <span>contactosdetech@gmail.com</span>
-                </a>
+        <div class="container footer-wrapper reveal">
+            <div class="footer-top-grid">
+                <!-- Columna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="#inicio" class="footer-logo">
+                        <img src="assets/LOGO-DETECH.png" alt="DETECH Logo">
+                    </a>
+                    <p class="footer-tagline">
+                        Webs, tiendas online y software a medida de alto rendimiento para impulsar empresas y negocios.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Navegación -->
+                <div class="footer-nav-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#proceso">Metodología</a></li>
+                        <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Canales Directos + Facebook -->
+                <div class="footer-contact-col">
+                    <h4>Conecta con DETECH</h4>
+                    <div class="footer-socials-grid">
+                        <a href="https://wa.me/525574211364" target="_blank" rel="noopener" class="social-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                            <span>55 7421 1364</span>
+                        </a>
+                        <a href="https://www.instagram.com/detech_dev/?hl=en" target="_blank" rel="noopener"
+                            class="social-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            <span>@detech_dev</span>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61590806211777" target="_blank" rel="noopener"
+                            class="social-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                            <span>DETECH Facebook</span>
+                        </a>
+                        <a href="mailto:contactosdetech@gmail.com" target="_blank" rel="noopener" class="social-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>contactosdetech@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
             </div>
+
             <div class="footer-copy">
                 <p>&copy; 2026 DETECH. Todos los derechos reservados.</p>
                 <div class="footer-links">
@@ -639,19 +836,43 @@
         </div>
     </footer>
 
-    <!-- Botón Flotante WhatsApp -->
-    <div class="wa-container">
-        <div class="wa-message" id="wa-message">
-            <button id="close-wa" class="close-wa-btn" aria-label="Cerrar mensaje">&times;</button>
-            <span>¡Hola! ¿En qué te ayudamos?</span>
+    <!-- =========================================
+         CHATBOT BURBUJA CUADRADA WHATSAPP DETECH
+         ========================================= -->
+    <div class="wa-chatbot-widget" id="wa-widget">
+        <!-- Caja compacta tipo mensaje -->
+        <div class="wa-chat-card hidden" id="wa-message">
+            <div class="wa-chat-header">
+                <div class="wa-bot-profile">
+                    <div class="wa-bot-avatar">
+                        <img src="assets/LogoDETECHmini.png" alt="DETECH">
+                        <span class="wa-online-dot"></span>
+                    </div>
+                    <div class="wa-bot-meta">
+                        <strong>DETECH</strong>
+                        <span>En línea</span>
+                    </div>
+                </div>
+                <button id="close-wa" class="close-wa-btn" aria-label="Cerrar">&times;</button>
+            </div>
+
+            <div class="wa-chat-body">
+                <p>¡Hola! 👋 ¿Cotizamos tu web o software hoy?</p>
+                <a href="https://wa.me/525574211364?text=Hola%20DETECH,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto."
+                    target="_blank" rel="noopener" class="wa-chat-cta">
+                    Chatear ahora <span>↗</span>
+                </a>
+            </div>
         </div>
-        <a href="https://wa.me/5574211364" class="floating-wa" target="_blank" rel="noopener"
-            aria-label="Contactar por WhatsApp">
+
+        <!-- Botón Flotante -->
+        <button type="button" class="floating-wa" id="wa-toggle-btn" aria-label="Abrir WhatsApp DETECH">
+            <span class="wa-unread-badge hidden" id="wa-badge">1</span>
             <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
             </svg>
-        </a>
+        </button>
     </div>
 
     <script src="script.js"></script>
