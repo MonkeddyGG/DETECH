@@ -1765,18 +1765,18 @@ header.scrolled .nav-container {
     transition-delay: 0.36s;
 }
 
-/* =========================================
+/*/* =========================================
    ASISTENTE IA DEX (PNG LIBRE + GLOBO COMPACTO)
    ========================================= */
 .ai-widget-container {
     position: fixed;
-    bottom: 22px;
-    right: 22px;
+    bottom: 24px;
+    right: 24px;
     z-index: 1100;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 10px;
+    gap: 12px;
     pointer-events: none;
 }
 
@@ -1784,21 +1784,21 @@ header.scrolled .nav-container {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 12px;
     pointer-events: none;
 }
 
-/* Globo de saludo corto y compacto */
+/* Globo de saludo ligeramente más amplio y legible */
 .ai-greeting-bubble {
     pointer-events: auto;
     position: relative;
-    max-width: 220px;
-    padding: 10px 24px 10px 12px;
+    max-width: 260px;
+    padding: 12px 28px 12px 15px;
     background: rgba(6, 12, 26, 0.94);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border: 1px solid rgba(0, 229, 255, 0.38);
-    border-radius: 14px 14px 4px 14px;
+    border-radius: 16px 16px 4px 16px;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65), 0 0 16px rgba(0, 229, 255, 0.14);
     cursor: pointer;
     opacity: 1;
@@ -1819,8 +1819,8 @@ header.scrolled .nav-container {
 }
 
 .ai-greeting-bubble p {
-    font-size: 0.78rem;
-    line-height: 1.4;
+    font-size: 0.85rem;
+    line-height: 1.45;
     color: var(--text-primary);
     margin: 0;
 }
@@ -1831,15 +1831,15 @@ header.scrolled .nav-container {
 
 .ai-greeting-close {
     position: absolute;
-    top: 4px;
-    right: 6px;
+    top: 5px;
+    right: 7px;
     background: transparent;
     border: none;
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     line-height: 1;
     cursor: pointer;
-    padding: 2px 4px;
+    padding: 2px 5px;
     transition: color 0.2s ease;
 }
 
@@ -1847,12 +1847,12 @@ header.scrolled .nav-container {
     color: #ffffff;
 }
 
-/* Botón Flotante: SOLO la imagen PNG (sin círculo, borde ni fondo) */
+/* Imagen PNG de DEX más visible (84px) */
 .ai-floating-trigger {
     pointer-events: auto;
     position: relative;
-    width: 68px;
-    height: 68px;
+    width: 84px;
+    height: 84px;
     background: transparent;
     border: none;
     border-radius: 0;
@@ -1880,16 +1880,16 @@ header.scrolled .nav-container {
     filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.65));
 }
 
-/* Ventana del Chat IA (Compacta, no cubre toda la pantalla) */
+/* Ventana del Chat IA más cómoda (365px ancho x 265px historial) */
 .ai-chat-window {
     pointer-events: auto;
-    width: 315px;
+    width: 365px;
     max-width: calc(100vw - 28px);
     background: rgba(6, 11, 23, 0.96);
     backdrop-filter: blur(22px);
     -webkit-backdrop-filter: blur(22px);
     border: 1px solid rgba(0, 229, 255, 0.35);
-    border-radius: 16px;
+    border-radius: 18px;
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 22px rgba(0, 229, 255, 0.14);
     overflow: hidden;
     display: flex;
@@ -1911,7 +1911,7 @@ header.scrolled .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 12px;
+    padding: 12px 15px;
     background: linear-gradient(90deg, rgba(0, 85, 255, 0.28), rgba(0, 229, 255, 0.14));
     border-bottom: 1px solid rgba(0, 229, 255, 0.2);
 }
@@ -1919,12 +1919,12 @@ header.scrolled .nav-container {
 .ai-agent-info {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 10px;
 }
 
 .ai-header-bot-img {
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
     object-fit: contain;
     display: block;
 }
@@ -1937,30 +1937,30 @@ header.scrolled .nav-container {
 
 .ai-agent-title strong {
     font-family: var(--font-head);
-    font-size: 0.85rem;
+    font-size: 0.92rem;
     color: #ffffff;
 }
 
 .ai-agent-title span {
     font-family: var(--font-code);
-    font-size: 0.66rem;
+    font-size: 0.7rem;
     color: var(--brand-cyan);
 }
 
 .ai-header-actions {
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 8px;
 }
 
 .ai-quota-pill {
     font-family: var(--font-code);
-    font-size: 0.66rem;
+    font-size: 0.7rem;
     font-weight: 600;
     color: var(--brand-cyan);
     background: rgba(0, 229, 255, 0.1);
     border: 1px solid rgba(0, 229, 255, 0.28);
-    padding: 2px 7px;
+    padding: 3px 8px;
     border-radius: 50px;
 }
 
@@ -1968,10 +1968,10 @@ header.scrolled .nav-container {
     background: rgba(255, 255, 255, 0.06);
     border: none;
     color: var(--text-muted);
-    width: 24px;
-    height: 24px;
-    border-radius: 7px;
-    font-size: 1.15rem;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    font-size: 1.2rem;
     line-height: 1;
     cursor: pointer;
     display: flex;
@@ -1986,23 +1986,23 @@ header.scrolled .nav-container {
 }
 
 .ai-chat-messages {
-    padding: 12px;
-    height: 215px;
+    padding: 14px;
+    height: 265px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 10px;
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 229, 255, 0.3) transparent;
 }
 
 .ai-msg {
     max-width: 86%;
-    padding: 9px 12px;
-    font-size: 0.81rem;
-    line-height: 1.45;
+    padding: 10px 14px;
+    font-size: 0.87rem;
+    line-height: 1.48;
     word-wrap: break-word;
-    white-space: pre-wrap;
+    white-space: pre-line;
 }
 
 .ai-msg.bot {
@@ -2010,27 +2010,27 @@ header.scrolled .nav-container {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.09);
     color: var(--text-primary);
-    border-radius: 4px 13px 13px 13px;
+    border-radius: 4px 14px 14px 14px;
 }
 
 .ai-msg.user {
     align-self: flex-end;
     background: linear-gradient(135deg, var(--brand-blue), #0088cc);
     color: #ffffff;
-    border-radius: 13px 13px 4px 13px;
+    border-radius: 14px 14px 4px 14px;
     box-shadow: 0 4px 12px rgba(0, 85, 255, 0.3);
 }
 
 .ai-msg.typing {
     font-family: var(--font-code);
-    font-size: 0.74rem;
+    font-size: 0.78rem;
     color: var(--brand-cyan);
 }
 
 .ai-quick-prompts {
     display: flex;
-    gap: 6px;
-    padding: 0 10px 9px 10px;
+    gap: 7px;
+    padding: 0 12px 10px 12px;
     overflow-x: auto;
     scrollbar-width: none;
 }
@@ -2045,8 +2045,8 @@ header.scrolled .nav-container {
     border: 1px solid rgba(0, 229, 255, 0.25);
     color: var(--text-primary);
     font-family: var(--font-ui);
-    font-size: 0.72rem;
-    padding: 4px 9px;
+    font-size: 0.76rem;
+    padding: 5px 11px;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -2061,8 +2061,8 @@ header.scrolled .nav-container {
 .ai-chat-form {
     display: flex;
     align-items: center;
-    gap: 7px;
-    padding: 9px 10px;
+    gap: 8px;
+    padding: 10px 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(1, 3, 8, 0.75);
 }
@@ -2071,11 +2071,11 @@ header.scrolled .nav-container {
     flex-grow: 1;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 9px;
-    padding: 8px 10px;
+    border-radius: 10px;
+    padding: 9px 12px;
     color: #ffffff;
     font-family: var(--font-ui);
-    font-size: 0.81rem;
+    font-size: 0.86rem;
     outline: none;
     transition: border-color 0.25s ease;
 }
@@ -2090,9 +2090,9 @@ header.scrolled .nav-container {
 }
 
 .ai-chat-form button {
-    width: 34px;
-    height: 34px;
-    border-radius: 9px;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
     border: none;
     background: linear-gradient(135deg, var(--brand-blue), var(--brand-cyan));
     color: #ffffff;
@@ -2420,32 +2420,37 @@ header.scrolled .nav-container {
 
     /* Ajustes compactos para DEX en celular (no cubre toda la pantalla) */
     .ai-widget-container {
-        bottom: 14px;
+        bottom: 16px;
         right: 14px;
-        gap: 8px;
+        gap: 10px;
     }
 
     .ai-greeting-bubble {
-        max-width: 195px;
-        padding: 8px 22px 8px 10px;
+        max-width: 250px;
+        padding: 11px 26px 11px 14px;
     }
 
     .ai-greeting-bubble p {
-        font-size: 0.73rem;
-        line-height: 1.35;
+        font-size: 0.84rem;
+        line-height: 1.42;
     }
 
     .ai-floating-trigger {
-        width: 56px;
-        height: 56px;
+        width: 86px;
+        height: 82px;
     }
 
     .ai-chat-window {
-        width: 280px;
-        max-width: calc(100vw - 28px);
+        width: 345px;
+        max-width: calc(100vw - 24px);
     }
 
     .ai-chat-messages {
-        height: 185px;
+        height: 265px;
+        padding: 14px;
+    }
+
+    .ai-msg {
+        font-size: 0.86rem;
     }
 }
