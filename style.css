@@ -714,6 +714,176 @@ header.scrolled .nav-container {
 }
 
 /* =========================================
+   SEGUNDA SECCIÓN: QUÉ HACEMOS EN DETECH
+   ========================================= */
+.about-detech-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(45px, 6vw, 75px);
+    align-items: center;
+}
+
+.about-visual-wrapper {
+    position: relative;
+    padding-left: 34px;
+    padding-bottom: 34px;
+}
+
+.about-photo-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 4.2;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65);
+}
+
+.about-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.12) brightness(0.85);
+    transition: transform 0.6s var(--ease-out-expo), filter 0.6s ease;
+    display: block;
+}
+
+.about-visual-wrapper:hover .about-photo-frame img {
+    transform: scale(1.03);
+    filter: grayscale(85%) contrast(1.15) brightness(0.9);
+}
+
+.photo-tint-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 85, 255, 0.08) 0%, rgba(1, 3, 8, 0.55) 100%);
+    pointer-events: none;
+}
+
+.about-floating-list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 72%;
+    max-width: 340px;
+    padding: 22px 24px;
+    background: rgba(5, 10, 20, 0.92);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 229, 255, 0.08);
+    z-index: 3;
+}
+
+.about-floating-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-floating-list li {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 11px 0;
+    font-family: var(--font-head);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.about-floating-list li:first-child {
+    padding-top: 2px;
+}
+
+.about-floating-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 2px;
+}
+
+.about-floating-list li:hover {
+    color: var(--brand-cyan);
+    transform: translateX(4px);
+}
+
+.list-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--brand-cyan);
+    box-shadow: 0 0 8px var(--brand-cyan);
+    flex-shrink: 0;
+}
+
+.about-content-col {
+    text-align: left;
+}
+
+.about-headline {
+    font-size: clamp(2rem, 3.6vw, 2.85rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.about-metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 24px;
+    margin-top: 24px;
+    margin-bottom: 34px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.metric-value {
+    font-family: var(--font-head);
+    font-size: clamp(1.85rem, 3vw, 2.45rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.35;
+}
+
+.btn-about-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, var(--brand-blue), var(--brand-cyan));
+    color: #ffffff;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.94rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.25);
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+}
+
+.btn-about-pill:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 229, 255, 0.45);
+}
+
+/* =========================================
    SERVICIOS (BENTO BOX GRID ESTILO EDITORIAL)
    ========================================= */
 .bento-grid {
@@ -996,7 +1166,7 @@ header.scrolled .nav-container {
 }
 
 /* =========================================
-   METODOLOGÍA ESTRATÉGICA (NUEVO DISEÑO EDITORIAL)
+   METODOLOGÍA ESTRATÉGICA
    ========================================= */
 .methodology-layout {
     display: grid;
@@ -1571,13 +1741,418 @@ header.scrolled .nav-container {
     font-size: 0.86rem;
 }
 
+/* ANIMACIONES GLOBALES */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.75s ease, transform 0.75s var(--ease-out-expo);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 {
+    transition-delay: 0.12s;
+}
+
+.delay-2 {
+    transition-delay: 0.24s;
+}
+
+.delay-3 {
+    transition-delay: 0.36s;
+}
+
 /* =========================================
-   AJUSTES RESPONSIVOS DEL FOOTER EN CELULAR
+   ASISTENTE IA DEX (PNG LIBRE + GLOBO COMPACTO)
+   ========================================= */
+.ai-widget-container {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.ai-launcher-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+    pointer-events: none;
+}
+
+/* Globo de saludo corto y compacto */
+.ai-greeting-bubble {
+    pointer-events: auto;
+    position: relative;
+    max-width: 220px;
+    padding: 10px 24px 10px 12px;
+    background: rgba(6, 12, 26, 0.94);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(0, 229, 255, 0.38);
+    border-radius: 14px 14px 4px 14px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65), 0 0 16px rgba(0, 229, 255, 0.14);
+    cursor: pointer;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 0.35s ease, transform 0.35s var(--ease-out-expo), visibility 0.35s ease, border-color 0.25s ease;
+}
+
+.ai-greeting-bubble:hover {
+    border-color: var(--brand-cyan);
+    transform: translateY(-2px);
+}
+
+.ai-greeting-bubble.hidden {
+    opacity: 0;
+    transform: translateY(8px) scale(0.95);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.ai-greeting-bubble p {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.ai-greeting-bubble p strong {
+    color: var(--brand-cyan);
+}
+
+.ai-greeting-close {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 2px 4px;
+    transition: color 0.2s ease;
+}
+
+.ai-greeting-close:hover {
+    color: #ffffff;
+}
+
+/* Botón Flotante: SOLO la imagen PNG (sin círculo, borde ni fondo) */
+.ai-floating-trigger {
+    pointer-events: auto;
+    position: relative;
+    width: 68px;
+    height: 68px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s var(--ease-out-expo), filter 0.3s ease;
+}
+
+.ai-floating-trigger:hover {
+    transform: scale(1.07) translateY(-3px);
+    filter: drop-shadow(0 8px 18px rgba(0, 229, 255, 0.45));
+}
+
+.ai-trigger-png {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    display: block;
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.65));
+}
+
+/* Ventana del Chat IA (Compacta, no cubre toda la pantalla) */
+.ai-chat-window {
+    pointer-events: auto;
+    width: 315px;
+    max-width: calc(100vw - 28px);
+    background: rgba(6, 11, 23, 0.96);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 22px rgba(0, 229, 255, 0.14);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform-origin: bottom right;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 0.3s ease, transform 0.3s var(--ease-out-expo), visibility 0.3s ease;
+}
+
+.ai-chat-window.hidden {
+    opacity: 0;
+    transform: translateY(14px) scale(0.94);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.ai-chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: linear-gradient(90deg, rgba(0, 85, 255, 0.28), rgba(0, 229, 255, 0.14));
+    border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.ai-agent-info {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.ai-header-bot-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+}
+
+.ai-agent-title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.ai-agent-title strong {
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+
+.ai-agent-title span {
+    font-family: var(--font-code);
+    font-size: 0.66rem;
+    color: var(--brand-cyan);
+}
+
+.ai-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.ai-quota-pill {
+    font-family: var(--font-code);
+    font-size: 0.66rem;
+    font-weight: 600;
+    color: var(--brand-cyan);
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.28);
+    padding: 2px 7px;
+    border-radius: 50px;
+}
+
+.ai-close-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: none;
+    color: var(--text-muted);
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    font-size: 1.15rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.ai-close-btn:hover {
+    background: rgba(0, 229, 255, 0.2);
+    color: #ffffff;
+}
+
+.ai-chat-messages {
+    padding: 12px;
+    height: 215px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 229, 255, 0.3) transparent;
+}
+
+.ai-msg {
+    max-width: 86%;
+    padding: 9px 12px;
+    font-size: 0.81rem;
+    line-height: 1.45;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.ai-msg.bot {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    color: var(--text-primary);
+    border-radius: 4px 13px 13px 13px;
+}
+
+.ai-msg.user {
+    align-self: flex-end;
+    background: linear-gradient(135deg, var(--brand-blue), #0088cc);
+    color: #ffffff;
+    border-radius: 13px 13px 4px 13px;
+    box-shadow: 0 4px 12px rgba(0, 85, 255, 0.3);
+}
+
+.ai-msg.typing {
+    font-family: var(--font-code);
+    font-size: 0.74rem;
+    color: var(--brand-cyan);
+}
+
+.ai-quick-prompts {
+    display: flex;
+    gap: 6px;
+    padding: 0 10px 9px 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.ai-quick-prompts::-webkit-scrollbar {
+    display: none;
+}
+
+.ai-chip {
+    flex-shrink: 0;
+    background: rgba(0, 229, 255, 0.07);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    font-size: 0.72rem;
+    padding: 4px 9px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ai-chip:hover {
+    background: rgba(0, 229, 255, 0.18);
+    border-color: var(--brand-cyan);
+    color: #ffffff;
+}
+
+.ai-chat-form {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(1, 3, 8, 0.75);
+}
+
+.ai-chat-form input {
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 9px;
+    padding: 8px 10px;
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 0.81rem;
+    outline: none;
+    transition: border-color 0.25s ease;
+}
+
+.ai-chat-form input:focus {
+    border-color: var(--brand-cyan);
+}
+
+.ai-chat-form input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ai-chat-form button {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    border: none;
+    background: linear-gradient(135deg, var(--brand-blue), var(--brand-cyan));
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.ai-chat-form button:hover:not(:disabled) {
+    transform: scale(1.06);
+}
+
+.ai-chat-form button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   MEDIA QUERIES RESPONSIVAS
    ========================================= */
 @media (max-width: 960px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .logo-interactive-wrapper {
+        max-width: 320px;
+    }
+
+    .about-detech-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .about-visual-wrapper {
+        max-width: 520px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .bento-span-7,
+    .bento-span-5,
+    .bento-span-4 {
+        grid-column: span 12;
+    }
+
+    .methodology-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .methodology-header {
+        position: static;
+    }
+
     .site-footer {
         padding: 55px 0 95px 0;
-        /* Espacio extra abajo para el botón flotante de WhatsApp */
     }
 
     .footer-wrapper {
@@ -1606,7 +2181,6 @@ header.scrolled .nav-container {
         font-size: 0.92rem;
     }
 
-    /* Enlaces "Explorar" horizontales compactos en móvil */
     .footer-nav-col ul {
         flex-direction: row;
         flex-wrap: wrap;
@@ -1623,7 +2197,6 @@ header.scrolled .nav-container {
         padding-left: 8px;
     }
 
-    /* Tarjetas de contacto centradas */
     .footer-socials-grid {
         max-width: 480px;
         margin: 0 auto;
@@ -1639,392 +2212,6 @@ header.scrolled .nav-container {
 
     .footer-links {
         justify-content: center;
-    }
-}
-
-@media (max-width: 540px) {
-    .footer-socials-grid {
-        grid-template-columns: 1fr;
-        max-width: 340px;
-        gap: 10px;
-    }
-
-    .social-item {
-        justify-content: center;
-        padding: 13px 18px;
-        font-size: 0.9rem;
-    }
-
-    .wa-chatbot-widget {
-        bottom: 18px;
-        right: 18px;
-        left: 18px;
-    }
-
-    .wa-chat-card {
-        width: 100%;
-    }
-}
-
-
-
-/* =========================================
-   AJUSTE COMPACTO EN CELULAR
-   ========================================= */
-@media (max-width: 600px) {
-    .wa-chatbot-widget {
-        bottom: 16px;
-        right: 16px;
-        left: auto;
-        gap: 10px;
-    }
-
-    .wa-chat-card {
-        width: 255px;
-        /* Compacto y alineado a la derecha, sin tapar la pantalla */
-        border-radius: 14px;
-    }
-
-    .wa-chat-header {
-        padding: 10px 12px;
-    }
-
-    .wa-bot-avatar {
-        width: 30px;
-        height: 30px;
-    }
-
-    .wa-bot-meta strong {
-        font-size: 0.8rem;
-    }
-
-    .wa-bot-meta span {
-        font-size: 0.68rem;
-    }
-
-    .wa-chat-body {
-        padding: 10px 12px;
-    }
-
-    .wa-chat-bubble {
-        padding: 8px 10px;
-        font-size: 0.78rem;
-    }
-
-    .wa-chat-footer {
-        padding: 8px 12px 12px 12px;
-    }
-
-    .wa-chat-cta {
-        padding: 8px 12px;
-        font-size: 0.78rem;
-    }
-
-    .floating-wa {
-        width: 52px;
-        height: 52px;
-    }
-
-    .floating-wa svg {
-        width: 25px;
-        height: 25px;
-    }
-}
-
-@keyframes glowPulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.55);
-    }
-
-    70% {
-        box-shadow: 0 0 0 14px rgba(0, 229, 255, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
-    }
-}
-
-/* ANIMACIONES GLOBALES */
-.reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.75s ease, transform 0.75s var(--ease-out-expo);
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.delay-1 {
-    transition-delay: 0.12s;
-}
-
-.delay-2 {
-    transition-delay: 0.24s;
-}
-
-.delay-3 {
-    transition-delay: 0.36s;
-}
-
-/* =========================================
-   SEGUNDA SECCIÓN: QUÉ HACEMOS EN DETECH
-   ========================================= */
-.about-detech-grid {
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: clamp(45px, 6vw, 75px);
-    align-items: center;
-}
-
-.about-visual-wrapper {
-    position: relative;
-    padding-left: 34px;
-    padding-bottom: 34px;
-}
-
-.about-photo-frame {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4 / 4.2;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65);
-}
-
-.about-photo-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%) contrast(1.12) brightness(0.85);
-    transition: transform 0.6s var(--ease-out-expo), filter 0.6s ease;
-    display: block;
-}
-
-.about-visual-wrapper:hover .about-photo-frame img {
-    transform: scale(1.03);
-    filter: grayscale(85%) contrast(1.15) brightness(0.9);
-}
-
-.photo-tint-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0, 85, 255, 0.08) 0%, rgba(1, 3, 8, 0.55) 100%);
-    pointer-events: none;
-}
-
-/* Tarjeta Flotante Superpuesta (Igual a referencia pero en Glassmorphism DETECH) */
-.about-floating-list {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 72%;
-    max-width: 340px;
-    padding: 22px 24px;
-    background: rgba(5, 10, 20, 0.92);
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
-    border: 1px solid rgba(0, 229, 255, 0.25);
-    border-radius: 16px;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 229, 255, 0.08);
-    z-index: 3;
-}
-
-.about-floating-list ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-}
-
-.about-floating-list li {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    padding: 11px 0;
-    font-family: var(--font-head);
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-primary);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    transition: color 0.25s ease, transform 0.25s ease;
-}
-
-.about-floating-list li:first-child {
-    padding-top: 2px;
-}
-
-.about-floating-list li:last-child {
-    border-bottom: none;
-    padding-bottom: 2px;
-}
-
-.about-floating-list li:hover {
-    color: var(--brand-cyan);
-    transform: translateX(4px);
-}
-
-.list-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--brand-cyan);
-    box-shadow: 0 0 8px var(--brand-cyan);
-    flex-shrink: 0;
-}
-
-/* Columna Derecha */
-.about-content-col {
-    text-align: left;
-}
-
-.about-headline {
-    font-size: clamp(2rem, 3.6vw, 2.85rem);
-    font-weight: 800;
-    line-height: 1.12;
-    letter-spacing: -0.03em;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.about-metrics-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding-top: 24px;
-    margin-top: 24px;
-    margin-bottom: 34px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.metric-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.metric-value {
-    font-family: var(--font-head);
-    font-size: clamp(1.85rem, 3vw, 2.45rem);
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-}
-
-.metric-label {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.35;
-}
-
-.btn-about-pill {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 30px;
-    background: linear-gradient(135deg, var(--brand-blue), var(--brand-cyan));
-    color: #ffffff;
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: 0.94rem;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.25);
-    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
-}
-
-.btn-about-pill:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(0, 229, 255, 0.45);
-}
-
-/* =========================================
-   RESPONSIVO CELULAR PARA SEGUNDA SECCIÓN
-   ========================================= */
-@media (max-width: 960px) {
-    .about-detech-grid {
-        grid-template-columns: 1fr;
-        gap: 42px;
-    }
-
-    .about-visual-wrapper {
-        max-width: 520px;
-        margin: 0 auto;
-        width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    .about-visual-wrapper {
-        padding-left: 0;
-        padding-bottom: 0;
-    }
-
-    .about-photo-frame {
-        aspect-ratio: 16 / 11;
-        border-radius: 16px;
-    }
-
-    /* En celular la caja se integra limpiamente traslapada abajo para no apretar el texto */
-    .about-floating-list {
-        position: relative;
-        width: 92%;
-        max-width: none;
-        margin: -36px auto 0 auto;
-        padding: 18px 20px;
-    }
-
-    .about-floating-list li {
-        font-size: 0.85rem;
-        padding: 9px 0;
-    }
-
-    .about-metrics-row {
-        gap: 12px;
-    }
-
-    .metric-value {
-        font-size: 1.65rem;
-    }
-
-    .metric-label {
-        font-size: 0.78rem;
-    }
-}
-
-/* =========================================
-   MEDIA QUERIES RESPONSIVAS
-   ========================================= */
-@media (max-width: 960px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        text-align: left;
-    }
-
-    .logo-interactive-wrapper {
-        max-width: 320px;
-    }
-
-    .bento-span-7,
-    .bento-span-5,
-    .bento-span-4 {
-        grid-column: span 12;
-    }
-
-    .methodology-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .methodology-header {
-        position: static;
-    }
-
-    .footer-top-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
     }
 }
 
@@ -2184,352 +2371,81 @@ header.scrolled .nav-container {
 }
 
 @media (max-width: 600px) {
+    .about-visual-wrapper {
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+
+    .about-photo-frame {
+        aspect-ratio: 16 / 11;
+        border-radius: 16px;
+    }
+
+    .about-floating-list {
+        position: relative;
+        width: 92%;
+        max-width: none;
+        margin: -36px auto 0 auto;
+        padding: 18px 20px;
+    }
+
+    .about-floating-list li {
+        font-size: 0.85rem;
+        padding: 9px 0;
+    }
+
+    .about-metrics-row {
+        gap: 12px;
+    }
+
+    .metric-value {
+        font-size: 1.65rem;
+    }
+
+    .metric-label {
+        font-size: 0.78rem;
+    }
+
     .footer-socials-grid {
         grid-template-columns: 1fr;
+        max-width: 340px;
+        gap: 10px;
     }
 
-    .wa-chatbot-widget {
-        bottom: 18px;
-        right: 18px;
-        left: 18px;
+    .social-item {
+        justify-content: center;
+        padding: 13px 18px;
+        font-size: 0.9rem;
     }
 
-    .wa-chat-card {
-        width: 100%;
-    }
-}
-
-/* =========================================
-   ASISTENTE IA DETECH (ESTILO GLASS NEÓN)
-   ========================================= */
-.ai-widget-container {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
-    pointer-events: none;
-}
-
-.ai-chat-window {
-    pointer-events: auto;
-    width: 330px;
-    max-width: calc(100vw - 32px);
-    background: rgba(6, 11, 23, 0.96);
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
-    border: 1px solid rgba(0, 229, 255, 0.35);
-    border-radius: 18px;
-    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.78), 0 0 25px rgba(0, 229, 255, 0.14);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transform-origin: bottom right;
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    transition: opacity 0.35s ease, transform 0.35s var(--ease-out-expo), visibility 0.35s ease;
-}
-
-.ai-chat-window.hidden {
-    opacity: 0;
-    transform: translateY(16px) scale(0.94);
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.ai-chat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 14px;
-    background: linear-gradient(90deg, rgba(0, 85, 255, 0.28), rgba(0, 229, 255, 0.14));
-    border-bottom: 1px solid rgba(0, 229, 255, 0.2);
-}
-
-.ai-agent-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.ai-agent-avatar {
-    position: relative;
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: #010308;
-    border: 1px solid rgba(0, 229, 255, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3px;
-}
-
-.ai-agent-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.ai-status-dot {
-    position: absolute;
-    bottom: -2px;
-    right: -2px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--brand-cyan);
-    box-shadow: 0 0 8px var(--brand-cyan);
-    border: 1.5px solid #060b17;
-}
-
-.ai-agent-title {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.15;
-}
-
-.ai-agent-title strong {
-    font-family: var(--font-head);
-    font-size: 0.9rem;
-    color: #ffffff;
-}
-
-.ai-agent-title span {
-    font-family: var(--font-code);
-    font-size: 0.68rem;
-    color: var(--brand-cyan);
-}
-
-.ai-header-actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.ai-quota-pill {
-    font-family: var(--font-code);
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: var(--brand-cyan);
-    background: rgba(0, 229, 255, 0.1);
-    border: 1px solid rgba(0, 229, 255, 0.28);
-    padding: 3px 8px;
-    border-radius: 50px;
-}
-
-.ai-close-btn {
-    background: rgba(255, 255, 255, 0.06);
-    border: none;
-    color: var(--text-muted);
-    width: 26px;
-    height: 26px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
-
-.ai-close-btn:hover {
-    background: rgba(0, 229, 255, 0.2);
-    color: #ffffff;
-}
-
-.ai-chat-messages {
-    padding: 14px;
-    height: 245px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 229, 255, 0.3) transparent;
-}
-
-.ai-msg {
-    max-width: 86%;
-    padding: 10px 13px;
-    font-size: 0.84rem;
-    line-height: 1.48;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-}
-
-.ai-msg.bot {
-    align-self: flex-start;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    color: var(--text-primary);
-    border-radius: 4px 14px 14px 14px;
-}
-
-.ai-msg.user {
-    align-self: flex-end;
-    background: linear-gradient(135deg, var(--brand-blue), #0088cc);
-    color: #ffffff;
-    border-radius: 14px 14px 4px 14px;
-    box-shadow: 0 4px 14px rgba(0, 85, 255, 0.3);
-}
-
-.ai-msg.typing {
-    font-family: var(--font-code);
-    font-size: 0.76rem;
-    color: var(--brand-cyan);
-}
-
-.ai-quick-prompts {
-    display: flex;
-    gap: 6px;
-    padding: 0 12px 10px 12px;
-    overflow-x: auto;
-    scrollbar-width: none;
-}
-
-.ai-quick-prompts::-webkit-scrollbar {
-    display: none;
-}
-
-.ai-chip {
-    flex-shrink: 0;
-    background: rgba(0, 229, 255, 0.07);
-    border: 1px solid rgba(0, 229, 255, 0.25);
-    color: var(--text-primary);
-    font-family: var(--font-ui);
-    font-size: 0.74rem;
-    padding: 5px 10px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.ai-chip:hover {
-    background: rgba(0, 229, 255, 0.18);
-    border-color: var(--brand-cyan);
-    color: #ffffff;
-}
-
-.ai-chat-form {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(1, 3, 8, 0.75);
-}
-
-.ai-chat-form input {
-    flex-grow: 1;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 10px;
-    padding: 9px 12px;
-    color: #ffffff;
-    font-family: var(--font-ui);
-    font-size: 0.84rem;
-    outline: none;
-    transition: border-color 0.25s ease;
-}
-
-.ai-chat-form input:focus {
-    border-color: var(--brand-cyan);
-}
-
-.ai-chat-form input:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.ai-chat-form button {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    border: none;
-    background: linear-gradient(135deg, var(--brand-blue), var(--brand-cyan));
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.ai-chat-form button:hover:not(:disabled) {
-    transform: scale(1.06);
-}
-
-.ai-chat-form button:disabled {
-    opacity: 0.45;
-    cursor: not-allowed;
-}
-
-/* Botón Flotante PNG */
-.ai-floating-trigger {
-    pointer-events: auto;
-    position: relative;
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #0b1933, #010308);
-    border: 2px solid var(--brand-cyan);
-    box-shadow: 0 0 22px rgba(0, 229, 255, 0.45);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px;
-    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
-}
-
-.ai-floating-trigger:hover {
-    transform: scale(1.08) translateY(-2px);
-    box-shadow: 0 0 30px rgba(0, 229, 255, 0.75);
-}
-
-.ai-trigger-png {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 50%;
-}
-
-.ai-trigger-tag {
-    position: absolute;
-    top: -4px;
-    right: -4px;
-    background: linear-gradient(135deg, var(--brand-blue), var(--brand-cyan));
-    color: #ffffff;
-    font-family: var(--font-code);
-    font-size: 0.65rem;
-    font-weight: 700;
-    padding: 2px 6px;
-    border-radius: 50px;
-    border: 1.5px solid #010308;
-}
-
-@media (max-width: 600px) {
+    /* Ajustes compactos para DEX en celular (no cubre toda la pantalla) */
     .ai-widget-container {
-        bottom: 16px;
-        right: 16px;
+        bottom: 14px;
+        right: 14px;
+        gap: 8px;
     }
 
-    .ai-chat-window {
-        width: 295px;
+    .ai-greeting-bubble {
+        max-width: 195px;
+        padding: 8px 22px 8px 10px;
     }
 
-    .ai-chat-messages {
-        height: 215px;
+    .ai-greeting-bubble p {
+        font-size: 0.73rem;
+        line-height: 1.35;
     }
 
     .ai-floating-trigger {
-        width: 54px;
-        height: 54px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .ai-chat-window {
+        width: 280px;
+        max-width: calc(100vw - 28px);
+    }
+
+    .ai-chat-messages {
+        height: 185px;
     }
 }

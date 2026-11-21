@@ -4,7 +4,7 @@
 <head>
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETECH | Agencia de Desarrollo, Diseño Web y Marketing</title>
 
     <!-- Meta Etiquetas Básicas -->
@@ -28,7 +28,7 @@
         content="Agencia de Diseño y Desarrollo Web. Sitios Optimizados, Marketing Digital.">
     <meta name="twitter:image" content="https://detech-dev.vercel.app/assets/preview-detech.png">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4">
 
     <!-- Tipografía Estilo Editorial + Técnica (Plus Jakarta Sans, Inter & JetBrains Mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -282,7 +282,7 @@
                                     <line x1="12" y1="17" x2="12" y2="21"></line>
                                 </svg>
                             </div>
-                            <span class="bento-tag"> WEB &amp; SEO</span>
+                            <span class="bento-tag">WEB &amp; SEO</span>
                         </div>
                         <div class="bento-body">
                             <h3>Páginas Web</h3>
@@ -495,7 +495,7 @@
         </section>
 
         <!-- =========================================
-             METODOLOGÍA ESTRATÉGICA (MISMOS TEXTOS, NUEVO DISEÑO EDITORIAL)
+             METODOLOGÍA ESTRATÉGICA
              ========================================= -->
         <section id="proceso" class="section-padding">
             <div class="container reveal">
@@ -774,8 +774,6 @@
             </div>
         </section>
 
-
-
         <!-- =========================================
              SECCIÓN EMPEZAR PROYECTO / CONTACTO (INTACTA)
              ========================================= -->
@@ -917,20 +915,19 @@
     </footer>
 
     <!-- =========================================
-         ASISTENTE IA DETECH (GEMINI FLASH-LITE)
+         ASISTENTE IA DEX (DETECH)
          ========================================= -->
     <div class="ai-widget-container" id="ai-widget">
-        <!-- Ventana del Chat IA -->
-        <div class="ai-chat-window hidden" id="ai-chat-window" role="dialog" aria-label="Asistente IA de DETECH">
+        <!-- Ventana del Chat IA (Compacta y Responsiva) -->
+        <div class="ai-chat-window hidden" id="ai-chat-window" role="dialog" aria-label="Asistente IA DEX de DETECH">
             <div class="ai-chat-header">
                 <div class="ai-agent-info">
-                    <div class="ai-agent-avatar">
-                        <img src="assets/chatbot-detech.png" alt="Asistente IA DETECH">
-                        <span class="ai-status-dot"></span>
-                    </div>
+                    <!-- Reemplaza este src por tu PNG en assets/ (ej. assets/dex-bot.png) -->
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=120&q=80"
+                        alt="DEX IA" class="ai-header-bot-img">
                     <div class="ai-agent-title">
-                        <strong>DETECH AI</strong>
-                        <span>Asistente Virtual</span>
+                        <strong>DEX · DETECH AI</strong>
+                        <span>En línea</span>
                     </div>
                 </div>
                 <div class="ai-header-actions">
@@ -942,8 +939,7 @@
 
             <div class="ai-chat-messages" id="ai-chat-messages">
                 <div class="ai-msg bot">
-                    ¡Hola! Soy el asistente IA de <strong>DETECH</strong>. Pregúntame sobre nuestros servicios de
-                    páginas web, tiendas online, software a medida o redes sociales.
+                    Hola! soy <strong>DEX</strong>, la IA de DETECH. ¿En qué te puedo ayudar?
                 </div>
             </div>
 
@@ -951,16 +947,17 @@
             <div class="ai-quick-prompts" id="ai-quick-prompts">
                 <button type="button" class="ai-chip" data-prompt="¿Qué servicios ofrece DETECH?">Servicios</button>
                 <button type="button" class="ai-chip" data-prompt="¿Cómo funciona el pago y tiempos de entrega?">Tiempos
-                    y pagos</button>
+                    y
+                    pagos</button>
                 <button type="button" class="ai-chip"
                     data-prompt="¿Cómo puedo cotizar un proyecto con DETECH?">Cotizar</button>
             </div>
 
             <form class="ai-chat-form" id="ai-chat-form" autocomplete="off">
-                <input type="text" id="ai-chat-input" maxlength="300" placeholder="Escribe tu duda sobre DETECH..."
-                    aria-label="Mensaje para DETECH AI" required>
+                <input type="text" id="ai-chat-input" maxlength="300" placeholder="Pregúntale a DEX..."
+                    aria-label="Mensaje para DEX" required>
                 <button type="submit" id="ai-send-btn" aria-label="Enviar pregunta">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <line x1="22" y1="2" x2="11" y2="13"></line>
                         <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
@@ -969,14 +966,24 @@
             </form>
         </div>
 
-        <!-- Botón Flotante con tu PNG del Chatbot -->
-        <button type="button" class="ai-floating-trigger" id="ai-toggle-btn" aria-label="Abrir Asistente IA DETECH">
-            <img src="assets/chatbot-detech.png" alt="Chatbot IA DETECH" class="ai-trigger-png">
-            <span class="ai-trigger-tag">IA</span>
-        </button>
+        <!-- Fila inferior: Globo de saludo corto + Solo tu imagen PNG (sin círculo ni borde) -->
+        <div class="ai-launcher-row">
+            <div class="ai-greeting-bubble hidden" id="ai-greeting-bubble">
+                <button type="button" class="ai-greeting-close" id="ai-greeting-close"
+                    aria-label="Cerrar saludo">&times;</button>
+                <p id="ai-greeting-text">Hola! soy <strong>DEX</strong>, la IA de DETECH. ¿En qué te puedo ayudar?</p>
+            </div>
+
+            <button type="button" class="ai-floating-trigger" id="ai-toggle-btn"
+                aria-label="Abrir chat con DEX, la IA de DETECH">
+                <!-- Reemplaza este src por tu PNG transparente en assets/ (ej. assets/dex-bot.png) -->
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=180&q=80"
+                    alt="DEX IA de DETECH" class="ai-trigger-png">
+            </button>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=4"></script>
 </body>
 
 </html>
