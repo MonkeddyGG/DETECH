@@ -1,50 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* --- CHATBOT WHATSAPP CON DETECH (APARICIÓN SUAVE) --- */
-    const closeWaBtn = document.getElementById('close-wa');
-    const waMessage = document.getElementById('wa-message');
-    const waToggleBtn = document.getElementById('wa-toggle-btn');
-    const waBadge = document.getElementById('wa-badge');
-    let waUserClosed = false;
-
-    if (waMessage) {
-        // Inicia oculto para no invadir al cargar la página
-        waMessage.classList.add('hidden');
-        if (waBadge) waBadge.classList.add('hidden');
-
-        // Aparece suavemente después de 2.5 segundos
-        setTimeout(() => {
-            if (!waUserClosed) {
-                waMessage.classList.remove('hidden');
-                if (waBadge) waBadge.classList.remove('hidden');
-            }
-        }, 2500);
-    }
-
-    if (closeWaBtn && waMessage) {
-        closeWaBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            waUserClosed = true;
-            waMessage.classList.add('hidden');
-            if (waBadge) waBadge.classList.add('hidden');
-        });
-    }
-
-    if (waToggleBtn && waMessage) {
-        waToggleBtn.addEventListener('click', () => {
-            const isHidden = waMessage.classList.contains('hidden');
-            if (isHidden) {
-                waMessage.classList.remove('hidden');
-            } else {
-                waUserClosed = true;
-                waMessage.classList.add('hidden');
-            }
-            if (waBadge) {
-                waBadge.classList.add('hidden');
-            }
-        });
-    }
 
     /* --- MENÚ MÓVIL --- */
     const mobileMenuBtn = document.getElementById('mobile-menu');
