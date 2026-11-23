@@ -1947,22 +1947,6 @@ header.scrolled .nav-container {
     color: var(--brand-cyan);
 }
 
-.ai-header-actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.ai-quota-pill {
-    font-family: var(--font-code);
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--brand-cyan);
-    background: rgba(0, 229, 255, 0.1);
-    border: 1px solid rgba(0, 229, 255, 0.28);
-    padding: 3px 8px;
-    border-radius: 50px;
-}
 
 .ai-close-btn {
     background: rgba(255, 255, 255, 0.06);
@@ -2111,6 +2095,32 @@ header.scrolled .nav-container {
 .ai-chat-form button:disabled {
     opacity: 0.45;
     cursor: not-allowed;
+
+    /* Leyenda inferior: IA basada y desarrollada en Gemini */
+    .ai-powered-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 5px 12px 8px 12px;
+        background: rgba(1, 3, 8, 0.92);
+        font-family: var(--font-ui);
+        font-size: 0.2rem;
+        color: var(--text-muted);
+        letter-spacing: 0.2px;
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .ai-powered-footer svg {
+        color: var(--brand-cyan);
+        flex-shrink: 0;
+        filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.6));
+    }
+
+    .ai-powered-footer strong {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
 }
 
 /* =========================================
